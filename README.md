@@ -1,3 +1,8 @@
+https://pypi.org/project/transformers-supporter
+<pre>
+pip install transformers-supporter
+</pre>
+
 Supported models 
 
 <pre>
