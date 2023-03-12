@@ -6,13 +6,13 @@ def requirements():
         return f.read().splitlines()
 
 setuptools.setup(
-	name='transformers-helper',
+	name='transformers-supporter',
 	version='0.0.7',
-	description='Transformers helper',
+	description='Transformers supporter',
 	long_description=open('README.md').read(),
 	long_description_content_type='text/markdown',
 	author='Sang Ki Kwon',
-	url='https://github.com/automatethem/transformers-helper',
+	url='https://github.com/automatethem/transformers-supporter',
 	install_requires=requirements(),
 	author_email='automatethem@gmail.com',
 	license='MIT',
