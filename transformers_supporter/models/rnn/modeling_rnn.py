@@ -8,10 +8,10 @@ import pytorch_helper
 import torch
 from torch.nn import functional as F
 import transformers
-from .configuration_rnn import RNNConfig
+from .configuration_rnn import RnnConfig
 
-class RNNForAudioClassification(PreTrainedModel):
-    config_class = RNNConfig
+class RnnForAudioClassification(PreTrainedModel):
+    config_class = RnnConfig
 
     def __init__(self, config):
         super().__init__(config)        
@@ -35,8 +35,8 @@ class RNNForAudioClassification(PreTrainedModel):
 
 #모델을 오토 모델에 등록
 model_path = 'rnn-config'
-AutoConfig.register(model_path, RNNConfig)
-AutoModelForAudioClassification.register(RNNConfig, RNNForAudioClassification)
+AutoConfig.register(model_path, RnnConfig)
+AutoModelForAudioClassification.register(RnnConfig, RnnForAudioClassification)
 
 ####################
 
@@ -51,8 +51,8 @@ import torch
 from torch.nn import functional as F
 import transformers
 
-class RNNForTimeSeriesRegression(PreTrainedModel):
-    config_class = RNNConfig
+class RnnForTimeSeriesRegression(PreTrainedModel):
+    config_class = RnnConfig
 
     def __init__(self, config):
         super().__init__(config)        
@@ -82,6 +82,6 @@ class RNNForTimeSeriesRegression(PreTrainedModel):
 '''
 #모델을 오토 모델에 등록
 model_path = 'rnn-config'
-AutoConfig.register(model_path, RNNConfig)
-AutoModelForTimeSeriesRegression.register(RNNConfig, RNNForTimeSeriesRegression)
+AutoConfig.register(model_path, RnnConfig)
+AutoModelForTimeSeriesRegression.register(RnnConfig, RnnForTimeSeriesRegression)
 '''
