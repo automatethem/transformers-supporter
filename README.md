@@ -34,13 +34,13 @@ transformers_supporter.models.PretrainedEmbeddedRnnForSequenceClassification
 transformers_supporter.models.TorchtextTokenizer
 
 #Embedded 1DCNN
-transformers_supporter.models.Embedded1DCNNConfig
-transformers_supporter.models.Embedded1DCNNForSequenceClassification
+transformers_supporter.models.Embedded1dcnnConfig
+transformers_supporter.models.Embedded1dcnnForSequenceClassification
 
 #Faster RCNN
-transformers_supporter.models.FasterRCNNConfig
-transformers_supporter.models.FasterRCNNForObjectDetection
-transformers_supporter.models.FasterRCNNImageProcessor
+transformers_supporter.models.FasterRcnnConfig
+transformers_supporter.models.FasterRcnnForObjectDetection
+transformers_supporter.models.FasterRcnnImageProcessor
 </pre>
 
 <pre>
