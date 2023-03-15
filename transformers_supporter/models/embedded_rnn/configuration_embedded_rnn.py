@@ -9,7 +9,7 @@ from torch.nn import functional as F
 import pytorch_helper
 import transformers
 
-class EmbeddedRNNConfig(PretrainedConfig):
+class EmbeddedRnnConfig(PretrainedConfig):
     model_type = "embedded-rnn"
 
     def __init__(self, **kwargs):
@@ -19,9 +19,9 @@ class EmbeddedRNNConfig(PretrainedConfig):
 
 #오토 설정에 등록
 model_path = 'embedded-rnn'
-AutoConfig.register(model_path, EmbeddedRNNConfig)
+AutoConfig.register(model_path, EmbeddedRnnConfig)
 
-class PretrainedEmbeddedRNNConfig(PretrainedConfig):
+class PretrainedEmbeddedRnnConfig(PretrainedConfig):
     model_type = "pretrained-embedded-rnn"
 
     def __init__(self, **kwargs):
@@ -31,4 +31,4 @@ class PretrainedEmbeddedRNNConfig(PretrainedConfig):
 
 #오토 설정에 등록
 model_path = 'pretrained-embedded-rnn'
-AutoConfig.register(model_path, PretrainedEmbeddedRNNConfig)
+AutoConfig.register(model_path, PretrainedEmbeddedRnnConfig)
