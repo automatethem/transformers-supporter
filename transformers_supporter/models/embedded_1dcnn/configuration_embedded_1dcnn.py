@@ -9,7 +9,7 @@ from torch.nn import functional as F
 import pytorch_helper
 import transformers
 
-class Embedded1DCNNConfig(PretrainedConfig):
+class Embedded1dcnnConfig(PretrainedConfig):
     model_type = "embedded-1dcnn"
 
     def __init__(self, **kwargs):
@@ -19,4 +19,4 @@ class Embedded1DCNNConfig(PretrainedConfig):
 
 #오토 설정에 등록
 model_path = 'embedded-1dcnn'
-AutoConfig.register(model_path, Embedded1DCNNConfig)
+AutoConfig.register(model_path, Embedded1dcnnConfig)
