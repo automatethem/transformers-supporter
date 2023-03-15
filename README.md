@@ -16,10 +16,10 @@ transformers_supporter.models.AnnForTabularClassification
 transformers_supporter.models.TabularFeatureExtractor
 
 #CNN
-transformers_supporter.models.CNNConfig
-transformers_supporter.models.CNNForImageClassification
+transformers_supporter.models.CnnConfig
+transformers_supporter.models.CnnForImageClassification
 transformers_supporter.models.GrayscaleImageProcessor
-transformers_supporter.models.CNNForKeyPointDetection
+transformers_supporter.models.CnnForKeyPointDetection
 
 #RNN
 transformers_supporter.models.RNNConfig
