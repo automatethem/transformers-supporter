@@ -9,8 +9,8 @@ Supported models
 import transformers_supporter
 
 #ANN
-transformers_supporter.models.ANNConfig
-transformers_supporter.models.ANNForTabularRegression
+transformers_supporter.models.AnnConfig
+transformers_supporter.models.AnnForTabularRegression
 transformers_supporter.models.AnnForTabularBinaryClassification
 transformers_supporter.models.AnnForTabularClassification
 transformers_supporter.models.TabularFeatureExtractor
