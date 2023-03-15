@@ -45,6 +45,7 @@ import torch
 from torch.nn import functional as F
 import pytorch_helper
 import transformers
+from .configuration_embedded_rnn import EmbeddedRnnConfig
 
 class EmbeddedRnnForFixedLengthTranslation(PreTrainedModel):
     config_class = EmbeddedRnnConfig
