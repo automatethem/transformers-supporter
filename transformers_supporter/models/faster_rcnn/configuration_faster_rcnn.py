@@ -1,6 +1,6 @@
 from transformers import PretrainedConfig
 
-class FasterRCNNConfig(PretrainedConfig):
+class FasterRcnnConfig(PretrainedConfig):
     model_type = "faster-rcnn"
 
     def __init__(self, **kwargs):
@@ -10,4 +10,4 @@ class FasterRCNNConfig(PretrainedConfig):
 
 #오토 설정에 등록
 model_path = 'faster-rcnn'
-AutoConfig.register(model_path, FasterRCNNConfig)
+AutoConfig.register(model_path, FasterRcnnConfig)
