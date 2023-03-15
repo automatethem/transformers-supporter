@@ -8,10 +8,10 @@ import torch
 from torch.nn import functional as F
 import pytorch_helper
 import transformers
-from .configuration_cnn import CNNConfig
+from .configuration_cnn import CnnConfig
     
-class CNNForImageClassification(PreTrainedModel):
-    config_class = CNNConfig
+class CnnForImageClassification(PreTrainedModel):
+    config_class = CnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -40,7 +40,7 @@ class CNNForImageClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 #오토 모델에 등록
-AutoModelForImageClassification.register(CNNConfig, CNNForImageClassification)
+AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
 
 ####################
 
@@ -49,10 +49,10 @@ import torch
 from torch.nn import functional as F
 import pytorch_helper
 import transformers
-from .configuration_cnn import CNNConfig
+from .configuration_cnn import CnnConfig
 
-class CNNForKeyPointDetection(PreTrainedModel):
-    config_class = CNNConfig
+class CnnForKeyPointDetection(PreTrainedModel):
+    config_class = CnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -84,7 +84,7 @@ class CNNForKeyPointDetection(PreTrainedModel):
 
 '''
 #오토 모델에 등록
-AutoModelForKeyPointDetection.register(CNNConfig, CNNForKeyPointDetection)
+AutoModelForKeyPointDetection.register(CnnConfig, CnnForKeyPointDetection)
 '''
 
 ####################
