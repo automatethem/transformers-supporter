@@ -8,7 +8,7 @@ import torch
 from torch.nn import functional as F
 import transformers
 
-class ANNConfig(PretrainedConfig):
+class AnnConfig(PretrainedConfig):
     model_type = "ann"
 
     def __init__(self, **kwargs):
@@ -18,4 +18,4 @@ class ANNConfig(PretrainedConfig):
 
 #오토 모델에 등록
 model_path = 'ann'
-AutoConfig.register(model_path, ANNConfig)
+AutoConfig.register(model_path, AnnConfig)
