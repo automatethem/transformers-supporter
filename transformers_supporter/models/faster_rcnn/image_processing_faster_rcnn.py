@@ -7,7 +7,7 @@ from transformers import AutoImageProcessor
 from torchvision import transforms
 from torch.nn import functional as F
 
-class FasterRCNNImageProcessor(ImageProcessingMixin):
+class FasterRcnnImageProcessor(ImageProcessingMixin):
     def __init__(self, image_mean=[0.5, 0.5, 0.5], image_std=[0.5, 0.5, 0.5], **kwargs):
         super().__init__(**kwargs)
         self.image_mean = image_mean
@@ -76,4 +76,4 @@ class FasterRCNNImageProcessor(ImageProcessingMixin):
         return results
 
 #오토 이미지 프로세서에 등록
-AutoImageProcessor.register(FasterRCNNImageProcessor, FasterRCNNImageProcessor)
+AutoImageProcessor.register(FasterRcnnImageProcessor, FasterRcnnImageProcessor)
