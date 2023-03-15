@@ -22,9 +22,9 @@ transformers_supporter.models.GrayscaleImageProcessor
 transformers_supporter.models.CnnForKeyPointDetection
 
 #RNN
-transformers_supporter.models.RNNConfig
-transformers_supporter.models.RNNForAudioClassification
-transformers_supporter.models.RNNForTimeSeriesRegression
+transformers_supporter.models.RnnConfig
+transformers_supporter.models.RnnForAudioClassification
+transformers_supporter.models.RnnForTimeSeriesRegression
 
 #Embedded RNN
 transformers_supporter.models.EmbeddedRNNConfig
