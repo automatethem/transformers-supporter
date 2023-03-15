@@ -8,10 +8,10 @@ import torch
 from torch.nn import functional as F
 import pytorch_helper
 import transformers
-from .configuration_embedded_rnn import EmbeddedRNNConfig
+from .configuration_embedded_rnn import EmbeddedRnnConfig
 
-class EmbeddedRNNForSequenceClassification(PreTrainedModel):
-    config_class = EmbeddedRNNConfig
+class EmbeddedRnnForSequenceClassification(PreTrainedModel):
+    config_class = EmbeddedRnnConfig
 
     def __init__(self, config):
         super().__init__(config)        
@@ -32,7 +32,7 @@ class EmbeddedRNNForSequenceClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 #오토 모델에 등록
-AutoModelForSequenceClassification.register(EmbeddedRNNConfig, EmbeddedRNNForSequenceClassification)
+AutoModelForSequenceClassification.register(EmbeddedRnnConfig, EmbeddedRnnForSequenceClassification)
 
 ####################
 
@@ -46,8 +46,8 @@ from torch.nn import functional as F
 import pytorch_helper
 import transformers
 
-class EmbeddedRNNForFixedLengthTranslation(PreTrainedModel):
-    config_class = EmbeddedRNNConfig
+class EmbeddedRnnForFixedLengthTranslation(PreTrainedModel):
+    config_class = EmbeddedRnnConfig
 
     def __init__(self, config):
         super().__init__(config)        
@@ -74,7 +74,7 @@ class EmbeddedRNNForFixedLengthTranslation(PreTrainedModel):
 
 '''
 #오토 모델에 등록
-AutoModelForFixedLengthTranslation.register(EmbeddedRNNConfig, EmbeddedRNNForFixedLengthTranslation)
+AutoModelForFixedLengthTranslation.register(EmbeddedRnnConfig, EmbeddedRnnForFixedLengthTranslation)
 '''
 
 ####################
@@ -85,14 +85,14 @@ from transformers import AutoModel
 from transformers import AutoTokenizer
 from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
-from .configuration_embedded_rnn import PretrainedEmbeddedRNNConfig
+from .configuration_embedded_rnn import PretrainedEmbeddedRnnConfig
 import torch
 from torch.nn import functional as F
 from torchtext.vocab import build_vocab_from_iterator, Vectors
 import transformers
 
-class PretrainedEmbeddedRNNForSequenceClassification(PreTrainedModel):
-    config_class = PretrainedEmbeddedRNNConfig
+class PretrainedEmbeddedRnnForSequenceClassification(PreTrainedModel):
+    config_class = PretrainedEmbeddedRnnConfig
 
     def __init__(self, config):
         super().__init__(config)  
@@ -131,6 +131,6 @@ class PretrainedEmbeddedRNNForSequenceClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 #오토 모델에 등록
-AutoModelForSequenceClassification.register(PretrainedEmbeddedRNNConfig, PretrainedEmbeddedRNNForSequenceClassification)
+AutoModelForSequenceClassification.register(PretrainedEmbeddedRnnConfig, PretrainedEmbeddedRnnForSequenceClassification)
 
 ####################
