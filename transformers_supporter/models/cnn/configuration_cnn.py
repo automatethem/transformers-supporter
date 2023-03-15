@@ -9,7 +9,7 @@ from torch.nn import functional as F
 import pytorch_helper
 import transformers
 
-class CNNConfig(PretrainedConfig):
+class CnnConfig(PretrainedConfig):
     model_type = "cnn"
 
     def __init__(self, **kwargs):
@@ -19,4 +19,4 @@ class CNNConfig(PretrainedConfig):
 
 #오토 설정에 등록
 model_path = 'cnn'
-AutoConfig.register(model_path, CNNConfig)
+AutoConfig.register(model_path, CnnConfig)
