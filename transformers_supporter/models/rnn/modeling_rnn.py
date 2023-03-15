@@ -50,6 +50,7 @@ import pytorch_helper
 import torch
 from torch.nn import functional as F
 import transformers
+from .configuration_rnn import RnnConfig
 
 class RnnForTimeSeriesRegression(PreTrainedModel):
     config_class = RnnConfig
