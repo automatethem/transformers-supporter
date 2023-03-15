@@ -7,10 +7,10 @@ from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
 import transformers
-from .configuration_ann import ANNConfig
+from .configuration_ann import AnnConfig
 
-class ANNForTabularRegression(PreTrainedModel):
-    config_class = ANNConfig
+class AnnForTabularRegression(PreTrainedModel):
+    config_class = AnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -35,7 +35,7 @@ class ANNForTabularRegression(PreTrainedModel):
 
 '''
 #오토 모델에 등록
-AutoModelForTabularRegression.register(ANNConfig, ANNForTabularRegression)
+AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
 '''
 
 ####################
@@ -52,7 +52,7 @@ from torch.nn import functional as F
 import transformers
     
 class AnnForTabularBinaryClassification(PreTrainedModel):
-    config_class = ANNConfig
+    config_class = AnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -77,7 +77,7 @@ class AnnForTabularBinaryClassification(PreTrainedModel):
 
 '''
 #오토 모델에 등록
-AutoModelForTabularClassification.register(ANNConfig, AnnForTabularBinaryClassification)
+AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification)
 '''
 
 ####################
@@ -93,7 +93,7 @@ from torch.nn import functional as F
 import transformers
     
 class AnnForTabularClassification(PreTrainedModel):
-    config_class = ANNConfig
+    config_class = AnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -117,7 +117,7 @@ class AnnForTabularClassification(PreTrainedModel):
 
 '''
 #오토 모델에 등록
-AutoModelForTabularClassification.register(ANNConfig, AnnForTabularClassification)
+AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
 '''
 
 ####################
