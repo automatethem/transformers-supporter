@@ -50,7 +50,8 @@ import transformers
 import torch
 from torch.nn import functional as F
 import transformers
-    
+from .configuration_ann import AnnConfig
+
 class AnnForTabularBinaryClassification(PreTrainedModel):
     config_class = AnnConfig
 
@@ -91,7 +92,8 @@ from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
 import transformers
-    
+from .configuration_ann import AnnConfig
+
 class AnnForTabularClassification(PreTrainedModel):
     config_class = AnnConfig
 
