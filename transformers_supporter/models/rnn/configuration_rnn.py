@@ -1,6 +1,6 @@
 from transformers import PretrainedConfig
 
-class RNNConfig(PretrainedConfig):
+class RnnConfig(PretrainedConfig):
     model_type = "rnn-config"
 
     def __init__(self, **kwargs):
