@@ -8,10 +8,10 @@ import torch
 from torch.nn import functional as F
 import pytorch_helper
 import transformers
-from .configuration_embedded_1dcnn import Embedded1DCNNConfig
+from .configuration_embedded_1dcnn import Embedded1dcnnConfig
 
-class Embedded1DCNNForSequenceClassification(PreTrainedModel):
-    config_class = Embedded1DCNNConfig
+class Embedded1dcnnForSequenceClassification(PreTrainedModel):
+    config_class = Embedded1dcnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -43,4 +43,4 @@ class Embedded1DCNNForSequenceClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 #오토 모델에 등록
-AutoModelForSequenceClassification.register(Embedded1DCNNConfig, Embedded1DCNNForSequenceClassification)
+AutoModelForSequenceClassification.register(Embedded1dcnnConfig, Embedded1dcnnForSequenceClassification)
