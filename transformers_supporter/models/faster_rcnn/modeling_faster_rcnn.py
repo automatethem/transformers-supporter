@@ -12,10 +12,10 @@ from torchvision.models.detection import FasterRCNN
 from torchvision.models.detection.rpn import AnchorGenerator
 from torchvision.models.detection._utils import Matcher
 from torchvision.ops.boxes import box_iou
-from .configuration_faster_rcnn import FasterRCNNConfig
+from .configuration_faster_rcnn import FasterRcnnConfig
 
-class FasterRCNNForObjectDetection(PreTrainedModel):
-    config_class = FasterRCNNConfig
+class FasterRcnnForObjectDetection(PreTrainedModel):
+    config_class = FasterRcnnConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -73,5 +73,5 @@ class FasterRCNNForObjectDetection(PreTrainedModel):
                 return transformers.file_utils.ModelOutput({'loss': loss, 'boxes': boxes, 'labels': labels, 'scores': scores})
 
 #오토 모델에 등록
-AutoModelForObjectDetection.register(FasterRCNNConfig, FasterRCNNForObjectDetection)
+AutoModelForObjectDetection.register(FasterRcnnConfig, FasterRcnnForObjectDetection)
 
