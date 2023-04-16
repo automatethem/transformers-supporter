@@ -1,4 +1,4 @@
 transformers
-pytorch-helper
+pytorch-supporter
 torchtext
 konlpy
