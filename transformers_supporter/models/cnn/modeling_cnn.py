@@ -6,7 +6,7 @@ from transformers import AutoConfig
 from transformers import AutoModelForImageClassification
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_cnn import CnnConfig
     
@@ -25,7 +25,7 @@ class CnnForImageClassification(PreTrainedModel):
             torch.nn.ReLU(),
             torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0),
             torch.nn.Flatten(), #배치를 제외한 모든 차원을 평탄화
-            pytorch_helper.layers.LazilyInitializedLinear(out_features=config.num_labels)
+            pytorch_supporter.layers.LazilyInitializedLinear(out_features=config.num_labels)
         )
 
     def forward(self, pixel_values, labels=None):
@@ -47,7 +47,7 @@ AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
 from transformers import PreTrainedModel
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_cnn import CnnConfig
 
@@ -67,7 +67,7 @@ class CnnForKeyPointDetection(PreTrainedModel):
             torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0),
             torch.nn.Flatten(), #배치를 제외한 모든 차원을 평탄화
             torch.nn.Linear(in_features=14112, out_features=config.num_labels * 2)
-            #pytorch_helper.layers.LazilyInitializedLinear(out_features=30)
+            #pytorch_supporter.layers.LazilyInitializedLinear(out_features=30)
         )
 
     def forward(self, pixel_values, labels=None):
