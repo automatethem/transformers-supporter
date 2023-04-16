@@ -6,7 +6,7 @@ from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_custom_bert import CustomBertConfig
 
@@ -40,8 +40,8 @@ class CustomBertForSequenceClassification(PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
         self.layer = torch.nn.Sequential(
-            pytorch_helper.layers.DictToParameters(AutoModel.from_pretrained(config.bert_model_path)),
-            pytorch_helper.layers.SelectFromArray(index=1), #x.pooler_output
+            pytorch_supporter.layers.DictToParameters(AutoModel.from_pretrained(config.bert_model_path)),
+            pytorch_supporter.layers.SelectFromArray(index=1), #x.pooler_output
             torch.nn.Linear(in_features=768, out_features=config.num_labels)
         )
 
