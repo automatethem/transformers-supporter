@@ -6,7 +6,7 @@ from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 
 class EmbeddedRnnConfig(PretrainedConfig):
