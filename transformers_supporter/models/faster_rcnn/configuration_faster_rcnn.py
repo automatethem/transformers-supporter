@@ -1,4 +1,5 @@
 from transformers import PretrainedConfig
+from transformers import AutoConfig
 
 class FasterRcnnConfig(PretrainedConfig):
     model_type = "faster-rcnn"
