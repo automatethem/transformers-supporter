@@ -6,7 +6,7 @@ from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_embedded_rnn import EmbeddedRnnConfig
 
@@ -17,8 +17,8 @@ class EmbeddedRnnForSequenceClassification(PreTrainedModel):
         super().__init__(config)        
         self.layer = torch.nn.Sequential(
             torch.nn.Embedding(num_embeddings=config.vocab_size, embedding_dim=32),
-            pytorch_helper.layers.HiddenStateResetLSTM(input_size=32, hidden_size=32, batch_first=True),
-            pytorch_helper.layers.LSTMLastHiddenState(),
+            pytorch_supporter.layers.HiddenStateResetLSTM(input_size=32, hidden_size=32, batch_first=True),
+            pytorch_supporter.layers.LSTMLastHiddenState(),
             torch.nn.Linear(in_features=32, out_features=config.num_labels)
         )
 
@@ -43,7 +43,7 @@ from transformers import AutoTokenizer
 from transformers import AutoConfig
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_embedded_rnn import EmbeddedRnnConfig
 
@@ -54,8 +54,8 @@ class EmbeddedRnnForFixedLengthTranslation(PreTrainedModel):
         super().__init__(config)        
         self.layer = torch.nn.Sequential(
             torch.nn.Embedding(num_embeddings=config.vocab_size, embedding_dim=32),
-            pytorch_helper.layers.HiddenStateResetLSTM(input_size=32, hidden_size=32, batch_first=True),
-            pytorch_helper.layers.SelectFromArray(index=0), #lstm output, 모든 타임 스텝(토큰: 숫자, 문자, 단어)의 숨은 상태, torch.Size([8, 380, 32]) 
+            pytorch_supporter.layers.HiddenStateResetLSTM(input_size=32, hidden_size=32, batch_first=True),
+            pytorch_supporter.layers.SelectFromArray(index=0), #lstm output, 모든 타임 스텝(토큰: 숫자, 문자, 단어)의 숨은 상태, torch.Size([8, 380, 32]) 
             torch.nn.Linear(in_features=32, out_features=config.vocab_size)
         )
 
@@ -99,8 +99,8 @@ class PretrainedEmbeddedRnnForSequenceClassification(PreTrainedModel):
         super().__init__(config)  
         self.layer = torch.nn.Sequential(
             self.load_pretrained_embedding(num_embeddings=config.vocab_size, embedding_dim=300, id_to_token=config.id_to_token),
-            pytorch_helper.layers.HiddenStateResetLSTM(input_size=300, hidden_size=32, batch_first=True),
-            pytorch_helper.layers.LSTMLastHiddenState(),
+            pytorch_supporter.layers.HiddenStateResetLSTM(input_size=300, hidden_size=32, batch_first=True),
+            pytorch_supporter.layers.LSTMLastHiddenState(),
             torch.nn.Linear(in_features=32, out_features=config.num_labels)
         )
 
