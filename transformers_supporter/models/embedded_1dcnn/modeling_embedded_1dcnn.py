@@ -6,7 +6,7 @@ from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
 import torch
 from torch.nn import functional as F
-import pytorch_helper
+import pytorch_supporter
 import transformers
 from .configuration_embedded_1dcnn import Embedded1dcnnConfig
 
@@ -20,7 +20,7 @@ class Embedded1dcnnForSequenceClassification(PreTrainedModel):
             #https://chriskhanhtran.github.io/posts/cnn-sentence-classification/
             #Permute `x_embed` to match input shape requirement of `nn.Conv1d`.
             #Output shape: (b, embed_dim, max_len)
-            pytorch_helper.layers.Permute((0, 2, 1)),
+            pytorch_supporter.layers.Permute((0, 2, 1)),
             torch.nn.Conv1d(in_channels=32, out_channels=32, kernel_size=5, stride=1, padding=0),
             torch.nn.BatchNorm1d(num_features=32),
             torch.nn.ReLU(),
@@ -30,7 +30,7 @@ class Embedded1dcnnForSequenceClassification(PreTrainedModel):
             torch.nn.ReLU(),
             torch.nn.MaxPool1d(kernel_size=2, stride=2, padding=0),
             torch.nn.Flatten(), #배치를 제외한 모든 차원을 평탄화
-            pytorch_helper.layers.LazilyInitializedLinear(out_features=config.num_labels)
+            pytorch_supporter.layers.LazilyInitializedLinear(out_features=config.num_labels)
         )
 
     def forward(self, input_ids, labels=None):
