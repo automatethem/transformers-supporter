@@ -4,7 +4,7 @@ from transformers import AutoModel
 from transformers import AutoTokenizer
 from transformers import AutoConfig
 from transformers import AutoModelForAudioClassification
-import pytorch_helper
+import pytorch_supporter
 import torch
 from torch.nn import functional as F
 import transformers
@@ -16,8 +16,8 @@ class RnnForAudioClassification(PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)        
         self.layer = torch.nn.Sequential(
-            pytorch_helper.layers.HiddenStateResetLSTM(input_size=1, hidden_size=32, batch_first=True),
-            pytorch_helper.layers.LSTMLastHiddenState(),
+            pytorch_supporter.layers.HiddenStateResetLSTM(input_size=1, hidden_size=32, batch_first=True),
+            pytorch_supporter.layers.LSTMLastHiddenState(),
             torch.nn.Linear(in_features=32, out_features=config.num_labels)
         )
 
@@ -46,7 +46,7 @@ from transformers import AutoModel
 from transformers import AutoTokenizer
 from transformers import AutoConfig
 from transformers import AutoModelForAudioClassification
-import pytorch_helper
+import pytorch_supporter
 import torch
 from torch.nn import functional as F
 import transformers
@@ -58,8 +58,8 @@ class RnnForTimeSeriesRegression(PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)        
         self.layer = torch.nn.Sequential(
-            pytorch_helper.layers.HiddenStateResetLSTM(input_size=1, hidden_size=32, batch_first=True),
-            pytorch_helper.layers.LSTMLastHiddenState(),
+            pytorch_supporter.layers.HiddenStateResetLSTM(input_size=1, hidden_size=32, batch_first=True),
+            pytorch_supporter.layers.LSTMLastHiddenState(),
             torch.nn.Linear(in_features=32, out_features=32),
             #torch.nn.BatchNorm1d(num_features=32),
             torch.nn.ReLU(),
