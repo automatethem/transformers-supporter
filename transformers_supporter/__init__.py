@@ -17,6 +17,11 @@ from .models.custom_wav2vec2 import feature_extraction_custom_wav2vec2
 from .models.embedded_1dcnn import configuration_embedded_1dcnn
 from .models.embedded_1dcnn import modeling_embedded_1dcnn
 
+from .models.embedded_rnn import configuration_embedded_rnn
+from .models.embedded_rnn import modeling_embedded_rnn
+from .models.embedded_rnn import tokenization_embedded_rnn
+
+
 
 def register_auto():
     configuration_ann.register_auto()
@@ -34,3 +39,7 @@ def register_auto():
 
     configuration_embedded_1dcnn.register_auto()
     modeling_embedded_1dcnn.register_auto()
+
+    configuration_embedded_rnn.register_auto()
+    modeling_embedded_rnn.register_auto()
+    tokenization_embedded_rnn.register_auto()
