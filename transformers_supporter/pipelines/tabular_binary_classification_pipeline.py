@@ -31,6 +31,7 @@ class TabularBinaryClassificationPipeline(Pipeline):
             results = results[:top_k]            
         return results
 
-PIPELINE_REGISTRY.register_pipeline('tabular-binary-classification', 
+def register_pipeline():
+    PIPELINE_REGISTRY.register_pipeline('tabular-binary-classification', 
                                     #pt_model=AutoModelForTabularClassification
                                     pipeline_class=TabularBinaryClassificationPipeline)
