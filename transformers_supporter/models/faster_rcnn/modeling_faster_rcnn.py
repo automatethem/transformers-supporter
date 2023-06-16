@@ -72,6 +72,6 @@ class FasterRcnnForObjectDetection(PreTrainedModel):
                     scores.append(output['scores'])
                 return transformers.file_utils.ModelOutput({'loss': loss, 'boxes': boxes, 'labels': labels, 'scores': scores})
 
-#오토 모델에 등록
-AutoModelForObjectDetection.register(FasterRcnnConfig, FasterRcnnForObjectDetection)
+def register_auto():
+    AutoModelForObjectDetection.register(FasterRcnnConfig, FasterRcnnForObjectDetection)
 
