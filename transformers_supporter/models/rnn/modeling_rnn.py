@@ -34,7 +34,7 @@ class RnnForAudioClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 #모델을 오토 모델에 등록
-model_path = 'rnn-config'
+model_path = 'rnn'
 AutoConfig.register(model_path, RnnConfig)
 AutoModelForAudioClassification.register(RnnConfig, RnnForAudioClassification)
 
@@ -82,7 +82,7 @@ class RnnForTimeSeriesRegression(PreTrainedModel):
         
 '''
 #모델을 오토 모델에 등록
-model_path = 'rnn-config'
+model_path = 'rnn'
 AutoConfig.register(model_path, RnnConfig)
 AutoModelForTimeSeriesRegression.register(RnnConfig, RnnForTimeSeriesRegression)
 '''
