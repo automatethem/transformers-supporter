@@ -1,4 +1,5 @@
 from transformers import PretrainedConfig
+from transformers import AutoConfig
 
 class RnnConfig(PretrainedConfig):
     model_type = "rnn"
