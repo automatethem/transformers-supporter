@@ -48,5 +48,5 @@ class CustomWav2Vec2FeatureExtractor(FeatureExtractionMixin):
         #print(normed_input_values) #[array([-0.02099453, -0.0440244 , -0.0508533 , ..., -0.00437161, -0.01633461, -0.03376846], dtype=float32)]
         return normed_input_values
 
-#오토 특성 추출기에 등록
-AutoFeatureExtractor.register(CustomWav2Vec2FeatureExtractor, CustomWav2Vec2FeatureExtractor)
+def register_auto():
+    AutoFeatureExtractor.register(CustomWav2Vec2FeatureExtractor, CustomWav2Vec2FeatureExtractor)
