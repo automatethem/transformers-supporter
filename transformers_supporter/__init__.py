@@ -8,10 +8,9 @@ from transformers_supporter.models.ann.configuration_ann import AnnConfig
 from transformers_supporter.models.ann.modeling_ann import CnnForImageClassification
 
 from .models.ann import modeling_ann
-
+from .models.cnn import configuration_cnn
+from .models.cnn import modeling_cnn
 def register_auto():
-    AutoConfig.register("cnn", CnnConfig)
-    AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
-  
-
     modeling_ann.register_auto()
+    modeling_cnn.register_auto()
+    configuration_cnn.register_auto()
