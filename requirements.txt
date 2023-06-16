@@ -4,3 +4,4 @@ pytorch-supporter
 torchtext
 konlpy
 pillow
+bs4
