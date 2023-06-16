@@ -75,5 +75,5 @@ class FasterRcnnImageProcessor(ImageProcessingMixin):
             results.append({"scores": scores_, "labels": labels_, "boxes": boxes_})
         return results
 
-#오토 이미지 프로세서에 등록
-AutoImageProcessor.register(FasterRcnnImageProcessor, FasterRcnnImageProcessor)
+def register_auto():
+    AutoImageProcessor.register(FasterRcnnImageProcessor, FasterRcnnImageProcessor)
