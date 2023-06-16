@@ -33,13 +33,6 @@ class AnnForTabularRegression(PreTrainedModel):
             loss = F.mse_loss(logits, labels) 
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-'''
-#오토 모델에 등록
-AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
-'''
-
-####################
-
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel
 from transformers import AutoModel
@@ -76,13 +69,6 @@ class AnnForTabularBinaryClassification(PreTrainedModel):
             loss = F.binary_cross_entropy_with_logits(logits, labels)
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-'''
-#오토 모델에 등록
-AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification)
-'''
-
-####################
-
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel
 from transformers import AutoModel
@@ -117,9 +103,7 @@ class AnnForTabularClassification(PreTrainedModel):
             loss = F.nll_loss(F.log_softmax(logits), labels) #원핫 벡터를 넣을 필요없이 바로 실제값을 인자로 사용 #nll은 Negative Log Likelihood의 약자
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-'''
-#오토 모델에 등록
-AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
-'''
-
-####################
+def register_auto():
+    AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
+    AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification) 
+    AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
