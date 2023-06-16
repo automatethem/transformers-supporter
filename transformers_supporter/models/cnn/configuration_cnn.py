@@ -16,6 +16,5 @@ class CnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs) 
 
-#오토 설정에 등록
-model_path = 'cnn'
-AutoConfig.register(model_path, CnnConfig)
+def register_auto():
+    AutoConfig.register("cnn", CnnConfig)
