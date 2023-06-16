@@ -6,7 +6,6 @@ from transformers import AutoConfig
 from transformers import AutoModelForImageClassification
 import torch
 from torch.nn import functional as F
-import pytorch_supporter
 import transformers
 
 class CnnConfig(PretrainedConfig):
