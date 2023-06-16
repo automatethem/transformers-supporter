@@ -139,5 +139,5 @@ class TorchtextTokenizer(FeatureExtractionMixin):
             pickle.dump(TorchtextTokenizer.vocab, f)
         return super().save_pretrained(save_directory, push_to_hub, **kwargs)
     
-#오토 특성 추출기에 등록
-AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
+def register_auto():
+    AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
