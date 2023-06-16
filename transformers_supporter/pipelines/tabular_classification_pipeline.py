@@ -31,6 +31,7 @@ class TabularClassificationPipeline(Pipeline):
             results = results[:top_k]            
         return results
 
-PIPELINE_REGISTRY.register_pipeline('tabular-classification', 
+def register_pipeline():
+    PIPELINE_REGISTRY.register_pipeline('tabular-classification', 
                                     #pt_model=AutoModelForTabularClassification
                                     pipeline_class=TabularClassificationPipeline)
