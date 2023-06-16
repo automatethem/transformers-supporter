@@ -28,6 +28,7 @@ class CustomImageClassificationPipeline(Pipeline):
             results = results[:top_k]            
         return results
 
-PIPELINE_REGISTRY.register_pipeline('custom-image-classification', 
+def register_pipeline():
+    PIPELINE_REGISTRY.register_pipeline('custom-image-classification', 
                                     #pt_model=AutoModelForImageClassification,
                                     pipeline_class=CustomImageClassificationPipeline)
