@@ -17,10 +17,6 @@ class EmbeddedRnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)
 
-#오토 설정에 등록
-model_path = 'embedded-rnn'
-AutoConfig.register(model_path, EmbeddedRnnConfig)
-
 class PretrainedEmbeddedRnnConfig(PretrainedConfig):
     model_type = "pretrained-embedded-rnn"
 
@@ -29,6 +25,6 @@ class PretrainedEmbeddedRnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)
 
-#오토 설정에 등록
-model_path = 'pretrained-embedded-rnn'
-AutoConfig.register(model_path, PretrainedEmbeddedRnnConfig)
+def register_auto():
+    AutoConfig.register("embedded-rnn", EmbeddedRnnConfig)
+    AutoConfig.register("pretrained-embedded-rnn", PretrainedEmbeddedRnnConfig)
