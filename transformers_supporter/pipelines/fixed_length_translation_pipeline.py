@@ -31,6 +31,7 @@ class FixedLengthTranslationPipeline(Pipeline):
             results.append({'translation_text': translation_text})         
         return results
 
-PIPELINE_REGISTRY.register_pipeline('fixed-length-translation', 
+def register_pipeline():
+    PIPELINE_REGISTRY.register_pipeline('fixed-length-translation', 
                                     #pt_model=AutoModelForFixedLengthTranslation,
                                     pipeline_class=FixedLengthTranslationPipeline)
