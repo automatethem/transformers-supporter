@@ -46,11 +46,6 @@ class GrayscaleImageProcessor(ImageProcessingMixin):
             results['scores'].append(probability)        
         return results
 
-#오토 이미지 프로세서에 등록
-AutoImageProcessor.register(GrayscaleImageProcessor, GrayscaleImageProcessor)
-
-####################################
-
 from transformers import ImageProcessingMixin
 from PIL import Image
 import torch
@@ -112,7 +107,6 @@ class KeyPointImageProcessor(ImageProcessingMixin):
                 new_keypoints.append((x, y))
         return new_keypoints
 
-#오토 이미지 프로세서에 등록
-AutoImageProcessor.register(KeyPointImageProcessor, KeyPointImageProcessor)
-
-####################################
+def register_auto():
+    AutoImageProcessor.register(GrayscaleImageProcessor, GrayscaleImageProcessor)
+    AutoImageProcessor.register(KeyPointImageProcessor, KeyPointImageProcessor)
