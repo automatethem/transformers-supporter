@@ -104,6 +104,7 @@ class AnnForTabularClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 def register_auto():
-    AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
-    AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification) 
-    AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
+    #AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
+    #AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification) 
+    #AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
+    pass
