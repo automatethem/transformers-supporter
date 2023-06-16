@@ -9,6 +9,5 @@ class FasterRcnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)   
 
-#오토 설정에 등록
-model_path = 'faster-rcnn'
-AutoConfig.register(model_path, FasterRcnnConfig)
+def register_auto():
+    AutoConfig.register("faster-rcnn", FasterRcnnConfig)
