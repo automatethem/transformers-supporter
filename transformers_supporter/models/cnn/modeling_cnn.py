@@ -40,11 +40,6 @@ class CnnForImageClassification(PreTrainedModel):
             loss = F.nll_loss(F.log_softmax(logits), labels) #원핫 벡터를 넣을 필요없이 바로 실제값을 인자로 사용 #nll은 Negative Log Likelihood의 약자
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-#오토 모델에 등록
-AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
-
-####################
-
 from transformers import PreTrainedModel
 import torch
 from torch.nn import functional as F
@@ -83,9 +78,6 @@ class CnnForKeyPointDetection(PreTrainedModel):
             loss = F.mse_loss(logits, labels) 
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-'''
-#오토 모델에 등록
-AutoModelForKeyPointDetection.register(CnnConfig, CnnForKeyPointDetection)
-'''
-
-####################
+def register_auto():
+    AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
+    #AutoModelForKeyPointDetection.register(CnnConfig, CnnForKeyPointDetection)
