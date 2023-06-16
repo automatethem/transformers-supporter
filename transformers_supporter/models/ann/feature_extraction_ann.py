@@ -124,6 +124,5 @@ class TabularFeatureExtractor(FeatureExtractionMixin):
             pickle.dump(TabularFeatureExtractor.transformer, f)
         return super().save_pretrained(save_directory, push_to_hub, **kwargs)
 
-#오토 특성 추출기에 등록
-AutoFeatureExtractor.register(TabularFeatureExtractor, TabularFeatureExtractor)
-
+def register_auto():
+    AutoFeatureExtractor.register(TabularFeatureExtractor, TabularFeatureExtractor)
