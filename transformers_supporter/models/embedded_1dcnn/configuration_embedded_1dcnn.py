@@ -17,6 +17,5 @@ class Embedded1dcnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)   
 
-#오토 설정에 등록
-model_path = 'embedded-1dcnn'
-AutoConfig.register(model_path, Embedded1dcnnConfig)
+def register_auto():
+    AutoConfig.register("embedded-1dcnn", Embedded1dcnnConfig)
