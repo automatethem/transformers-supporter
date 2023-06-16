@@ -17,6 +17,5 @@ class CustomBertConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)
 
-#오토 설정에 등록
-model_path = 'custom-bert'
-AutoConfig.register(model_path, CustomBertConfig)
+def register_auto():
+    AutoConfig.register("custom-bert", CustomBertConfig)
