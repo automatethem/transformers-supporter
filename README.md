@@ -7,7 +7,8 @@ Supported models
 
 <pre>
 import transformers_supporter
-
+transformers_supporter.register_auto()
+  
 #ANN
 transformers_supporter.models.AnnConfig
 transformers_supporter.models.AnnForTabularRegression
