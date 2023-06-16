@@ -25,6 +25,8 @@ from .models.faster_rcnn import configuration_faster_rcnn
 from .models.faster_rcnn import modeling_faster_rcnn
 from .models.faster_rcnn import image_processing_faster_rcnn
 
+from .models.rnn import configuration_rnn
+from .models.rnn import modeling_rnn
 
 def register_auto():
     configuration_ann.register_auto()
@@ -50,3 +52,6 @@ def register_auto():
     configuration_faster_rcnn.register_auto()
     modeling_faster_rcnn.register_auto()
     image_processing_faster_rcnn.register_auto()
+
+    configuration_rnn.register_auto()
+    modeling_rnn.register_auto()
