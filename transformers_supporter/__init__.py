@@ -23,7 +23,7 @@ from .models.embedded_rnn import tokenization_embedded_rnn
 
 from .models.faster_rcnn import configuration_faster_rcnn
 from .models.faster_rcnn import modeling_faster_rcnn
-from .models.faster_rcnn import tokenization_faster_rcnn
+from .models.faster_rcnn import image_processing_faster_rcnn
 
 
 def register_auto():
@@ -49,4 +49,4 @@ def register_auto():
 
     configuration_faster_rcnn.register_auto()
     modeling_faster_rcnn.register_auto()
-    tokenization_faster_rcnn.register_auto()
+    image_processing_faster_rcnn.register_auto()
