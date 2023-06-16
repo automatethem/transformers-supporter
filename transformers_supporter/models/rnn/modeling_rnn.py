@@ -33,13 +33,6 @@ class RnnForAudioClassification(PreTrainedModel):
             loss = F.nll_loss(F.log_softmax(logits), labels) #원핫 벡터를 넣을 필요없이 바로 실제값을 인자로 사용 #nll은 Negative Log Likelihood의 약자
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-#모델을 오토 모델에 등록
-model_path = 'rnn'
-AutoConfig.register(model_path, RnnConfig)
-AutoModelForAudioClassification.register(RnnConfig, RnnForAudioClassification)
-
-####################
-
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel
 from transformers import AutoModel
@@ -79,10 +72,7 @@ class RnnForTimeSeriesRegression(PreTrainedModel):
             #loss = torch.nn.MSELoss()(logits, labels) 
             loss = F.mse_loss(logits, labels) 
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
-        
-'''
-#모델을 오토 모델에 등록
-model_path = 'rnn'
-AutoConfig.register(model_path, RnnConfig)
-AutoModelForTimeSeriesRegression.register(RnnConfig, RnnForTimeSeriesRegression)
-'''
+
+def register_auto():
+    AutoModelForAudioClassification.register(RnnConfig, RnnForAudioClassification)
+    #AutoModelForTimeSeriesRegression.register(RnnConfig, RnnForTimeSeriesRegression)
