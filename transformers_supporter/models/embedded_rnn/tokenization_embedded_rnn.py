@@ -1,5 +1,6 @@
 from transformers import FeatureExtractionMixin
-from transformers import AutoFeatureExtractor
+#from transformers import AutoFeatureExtractor
+from transformers import AutoTokenizer
 from transformers import BatchFeature
 import pickle
 from torchtext.data.utils import get_tokenizer
@@ -140,4 +141,5 @@ class TorchtextTokenizer(FeatureExtractionMixin):
         return super().save_pretrained(save_directory, push_to_hub, **kwargs)
     
 def register_auto():
-    AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
+    #AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
+    AutoTokenizer.register(TorchtextTokenizer, TorchtextTokenizer)
