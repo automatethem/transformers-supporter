@@ -26,7 +26,7 @@ from .embedded_rnn.configuration_embedded_rnn import EmbeddedRnnConfig
 from .embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForSequenceClassification
 from .embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForFixedLengthTranslation
 from .embedded_rnn.modeling_embedded_rnn import PretrainedEmbeddedRnnForSequenceClassification
-from .embedded_rnn.tokenization_embedded_rnn import TorchtextTokenizer
+from .embedded_rnn.feature_extraction_embedded_rnn import TorchtextFeatureExtractor
 
 from .embedded_1dcnn.configuration_embedded_1dcnn import Embedded1dcnnConfig
 from .embedded_1dcnn.modeling_embedded_1dcnn import Embedded1dcnnForSequenceClassification
