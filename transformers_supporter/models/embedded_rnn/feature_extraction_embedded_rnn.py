@@ -141,5 +141,4 @@ class TorchtextTokenizer(FeatureExtractionMixin):
         return super().save_pretrained(save_directory, push_to_hub, **kwargs)
     
 def register_auto():
-    #AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
-    AutoTokenizer.register(TorchtextTokenizer, TorchtextTokenizer)
+    AutoFeatureExtractor.register(TorchtextTokenizer, TorchtextTokenizer)
