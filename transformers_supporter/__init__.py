@@ -70,7 +70,7 @@ from .pipelines import tabular_classification_pipeline
 from .pipelines import custom_image_classification_pipeline
 from .pipelines import fixed_length_translation_pipeline
 
-def register_pipeline()
+def register_pipeline():
     tabular_regression_pipeline.register_pipeline()
     tabular_binary_classification_pipeline.register_pipeline()
     tabular_classification_pipeline.register_pipeline()
