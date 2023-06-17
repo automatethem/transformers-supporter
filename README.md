@@ -59,7 +59,8 @@ Supported pipelines
 
 <pre>
 import transformers_supporter
-
+transformers_supporter.register_pipeline()
+  
 transformers_supporter.pipelines.FixedLengthTranslationPipeline
 transformers_supporter.pipelines.TabularBinaryClassificationPipeline
 transformers_supporter.pipelines.TabularClassificationPipeline
