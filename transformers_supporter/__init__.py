@@ -67,3 +67,7 @@ def register_auto():
     tabular_classification_pipeline.register_pipeline()
     custom_image_classification_pipeline.register_pipeline()
     fixed_length_translation_pipeline.register_pipeline()
+
+
+def register_pipeline()
+    pass
