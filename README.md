@@ -20,7 +20,7 @@ transformers_supporter.register_pipeline()
 
 ```
 AutoConfig (transformers_supporter.models.AnnConfig)
-AnnForTabularRegression (transformers_supporter.models.AnnForTabularRegression)
+(transformers_supporter.models.AnnForTabularRegression)
 AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
 pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularRegressionPipeline)
 ```
@@ -29,7 +29,7 @@ pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularReg
 
 ```
 AutoConfig (transformers_supporter.models.AnnConfig)
-AnnForTabularClassification (transformers_supporter.models.AnnForTabularClassification)
+(transformers_supporter.models.AnnForTabularClassification)
 AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
 pipeline(task="tabular-classification") (transformers_supporter.pipelines.TabularClassificationPipeline)
 ```
@@ -115,9 +115,9 @@ transformers_supporter.models.RnnForTimeSeriesRegression
 
 ```
 AutoConfig (transformers_helper.models.EmbeddedRNNConfig)
-transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
+(transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation)
 AutoFeatureExtractor (transformers_helper.models.TorchtextTokenizer)
-transformers_supporter.pipelines.FixedLengthTranslationPipeline
+(transformers_supporter.pipelines.FixedLengthTranslationPipeline)
 ```
 
 ### Custom Bert
