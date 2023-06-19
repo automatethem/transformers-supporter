@@ -86,6 +86,18 @@ AutoImageProcessor
 pipeline(task="object-detection")
 ```
 
+#### text-classification
+
+```
+#transformers_supporter.models.Embedded1dcnnConfig
+#transformers_supporter.models.Embedded1dcnnForSequenceClassification
+#transformers_helper.models.TorchtextFeatureExtractor
+AutoConfig
+AutoModelForForSequenceClassification
+AutoFeatureExtractor
+pipeline("text-classification")
+```
+
 ### Rnn
 
 #### audio-classification
@@ -126,15 +138,6 @@ AutoModelForSequenceClassification
 AutoFeatureExtractor
 ```
 
-```
-#transformers_supporter.models.Embedded1dcnnConfig
-#transformers_supporter.models.Embedded1dcnnForSequenceClassification
-#transformers_helper.models.TorchtextFeatureExtractor
-AutoConfig
-AutoModelForForSequenceClassification
-AutoFeatureExtractor
-pipeline("text-classification")
-```
 
 ```
 transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
