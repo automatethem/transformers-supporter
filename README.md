@@ -28,12 +28,9 @@ pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularReg
 #### tabular-classification
 
 ```
-#transformers_supporter.models.AnnConfig
-#transformers_supporter.models.AnnForTabularClassification
-#transformers_supporter.models.TabularFeatureExtractor
-AutoConfig
-AnnForTabularClassification
-AutoFeatureExtractor
+AutoConfig (transformers_supporter.models.AnnConfig)
+AnnForTabularClassification (transformers_supporter.models.AnnForTabularClassification)
+AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
 pipeline(task="tabular-classification") (transformers_supporter.pipelines.TabularClassificationPipeline)
 ```
 
@@ -47,22 +44,16 @@ transformers_supporter.models.AnnForTabularBinaryClassification
 #### image-classification
 
 ```
-#transformers_supporter.models.CnnConfig
-#transformers_supporter.models.CnnForImageClassification
-#AutoImageProcessor
-AutoConfig
-AutoModelForImageClassification
-AutoImageProcessor
+AutoConfig (transformers_supporter.models.CnnConfig)
+AutoModelForImageClassification (transformers_supporter.models.CnnForImageClassification)
+AutoImageProcessor (AutoImageProcessor)
 pipeline(task="image-classification")
 ```
 
 ```
-#transformers_supporter.models.CnnConfig
-#transformers_supporter.models.CnnForImageClassification
-#transformers_supporter.models.GrayscaleImageProcessor
-AutoConfig
-AutoModelForImageClassification
-AutoImageProcessor
+AutoConfig (transformers_supporter.models.CnnConfig)
+AutoModelForImageClassification (transformers_supporter.models.CnnForImageClassification)
+AutoImageProcessor (transformers_supporter.models.GrayscaleImageProcessor)
 pipeline(task="image-classification")
 ```
 
@@ -74,24 +65,18 @@ transformers_supporter.models.CnnForKeyPointDetection
 #### object-detection
 
 ```
-#transformers_supporter.models.FasterRcnnConfig
-#transformers_supporter.models.FasterRcnnForObjectDetection
-#transformers_supporter.models.FasterRcnnImageProcessor
-AutoConfig
-AutoModelForObjectDetection
-AutoImageProcessor
+AutoConfig (transformers_supporter.models.FasterRcnnConfig)
+AutoModelForObjectDetection (transformers_supporter.models.FasterRcnnForObjectDetection)
+AutoImageProcessor (transformers_supporter.models.FasterRcnnImageProcessor)
 pipeline(task="object-detection")
 ```
 
 #### text-classification
 
 ```
-#transformers_supporter.models.Embedded1dcnnConfig
-#transformers_supporter.models.Embedded1dcnnForSequenceClassification
-#transformers_helper.models.TorchtextFeatureExtractor
-AutoConfig
-AutoModelForForSequenceClassification
-AutoFeatureExtractor
+AutoConfig (transformers_supporter.models.Embedded1dcnnConfig)
+AutoModelForForSequenceClassification (transformers_supporter.models.Embedded1dcnnForSequenceClassification)
+AutoFeatureExtractor (transformers_helper.models.TorchtextFeatureExtractor)
 pipeline("text-classification")
 ```
 
@@ -100,32 +85,23 @@ pipeline("text-classification")
 #### text-classification
 
 ```
-#EmbeddedRnnConfig
-#EmbeddedRnnForSequenceClassification
-#TorchtextFeatureExtractor
-AutoConfig
-AutoModelForSequenceClassification
-AutoFeatureExtractor
+AutoConfig (EmbeddedRnnConfig)
+AutoModelForSequenceClassification (EmbeddedRnnForSequenceClassification)
+AutoFeatureExtractor (TorchtextFeatureExtractor)
 ```
 
 ```
-#PretrainedEmbeddedRnnConfig
-#PretrainedEmbeddedRnnForSequenceClassification
-#TorchtextFeatureExtractor
-AutoConfig
-AutoModelForSequenceClassification
-AutoFeatureExtractor
+AutoConfig (PretrainedEmbeddedRnnConfig)
+AutoModelForSequenceClassification (PretrainedEmbeddedRnnForSequenceClassification)
+AutoFeatureExtractor (TorchtextFeatureExtractor)
 ```
 
 #### audio-classification
 
 ```
-#transformers_supporter.models.RnnConfig
-#transformers_supporter.models.RnnForAudioClassification
-#AutoFeatureExtractor
-AutoConfig
-AutoModelForAudioClassification
-AutoFeatureExtractor
+AutoConfig (transformers_supporter.models.RnnConfig)
+AutoModelForAudioClassification (transformers_supporter.models.RnnForAudioClassification)
+AutoFeatureExtractor (AutoFeatureExtractor)
 pipeline(task="audio-classification")
 ```
 
