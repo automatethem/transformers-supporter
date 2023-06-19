@@ -111,13 +111,16 @@ pipeline(task="audio-classification")
 transformers_supporter.models.RnnForTimeSeriesRegression
 ```
 
-
+####
 
 ```
+AutoConfig (transformers_helper.models.EmbeddedRNNConfig)
 transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
+AutoFeatureExtractor (transformers_helper.models.TorchtextTokenizer)
+transformers_supporter.pipelines.FixedLengthTranslationPipeline
 ```
 
-### Bert
+### Custom Bert
 
 #### text-classification
 
@@ -135,13 +138,6 @@ pipeline(task="text-classification")
 ```
 transformers_supporter.pipelines.CustomImageClassificationPipeline
 ```
-
-### FixedLengthTranslationPipeline
-
-```
-transformers_supporter.pipelines.FixedLengthTranslationPipeline
-```
-
 
 ### TabularBinaryClassificationPipeline
 
