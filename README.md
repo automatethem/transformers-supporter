@@ -80,8 +80,16 @@ pipeline(task="object-detection")
 ### Rnn
 
 ```
-transformers_supporter.models.RnnConfig
-transformers_supporter.models.RnnForAudioClassification
+#transformers_supporter.models.RnnConfig
+#transformers_supporter.models.RnnForAudioClassification
+#AutoFeatureExtractor
+AutoConfig
+AutoModelForAudioClassification
+AutoFeatureExtractor
+pipeline(task="audio-classification")
+```
+
+```
 transformers_supporter.models.RnnForTimeSeriesRegression
 ```
 
