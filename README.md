@@ -65,6 +65,8 @@ AutoModelForSequenceClassification
 AutoFeatureExtractor
 ```
 
+#### Pretrained Embedded Rnn
+
 ```
 #PretrainedEmbeddedRnnConfig
 #PretrainedEmbeddedRnnForSequenceClassification
