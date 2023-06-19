@@ -1,0 +1,91 @@
+# transformers-supporter
+
+https://pypi.org/project/transformers-supporter
+```
+pip install transformers-supporter
+```
+
+## Supported models
+
+```
+import transformers_supporter
+transformers_supporter.register_auto()
+```
+
+### Ann
+
+```
+transformers_supporter.models.AnnConfig
+transformers_supporter.models.AnnForTabularRegression
+transformers_supporter.models.AnnForTabularBinaryClassification
+transformers_supporter.models.AnnForTabularClassification
+transformers_supporter.models.TabularFeatureExtractor
+```
+
+### Cnn
+
+```
+transformers_supporter.models.CnnConfig
+transformers_supporter.models.CnnForImageClassification
+transformers_supporter.models.GrayscaleImageProcessor
+transformers_supporter.models.CnnForKeyPointDetection
+```
+
+#### Faster Rcnn
+
+```
+transformers_supporter.models.FasterRcnnConfig
+transformers_supporter.models.FasterRcnnForObjectDetection
+transformers_supporter.models.FasterRcnnImageProcessor
+```
+
+#### Embedded 1dcnn
+
+```
+transformers_supporter.models.Embedded1dcnnConfig
+transformers_supporter.models.Embedded1dcnnForSequenceClassification
+```
+
+### Rnn
+
+```
+transformers_supporter.models.RnnConfig
+transformers_supporter.models.RnnForAudioClassification
+transformers_supporter.models.RnnForTimeSeriesRegression
+```
+
+#### Embedded Rnn
+
+```
+transformers_supporter.models.EmbeddedRnnConfig
+transformers_supporter.models.EmbeddedRnnForSequenceClassification
+transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
+transformers_supporter.models.PretrainedEmbeddedRnnForSequenceClassification
+transformers_supporter.models.TorchtextTokenizer
+```
+
+### Custom Bert
+
+```
+transformers_supporter.models.CustomBertConfig
+transformers_supporter.models.CustomBertForSequenceClassification
+```
+
+### Custom Wav2Vec2
+
+```
+transformers_supporter.models.CustomWav2Vec2FeatureExtractor
+```
+
+## Supported pipelines
+
+```
+import transformers_supporter
+transformers_supporter.register_pipeline()
+  
+transformers_supporter.pipelines.FixedLengthTranslationPipeline
+transformers_supporter.pipelines.TabularBinaryClassificationPipeline
+transformers_supporter.pipelines.TabularClassificationPipeline
+transformers_supporter.pipelines.TabularRegressionPipeline
+transformers_supporter.pipelines.CustomImageClassificationPipeline
+```
