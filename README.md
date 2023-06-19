@@ -122,8 +122,10 @@ transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
 #### text-classification
 
 ```
-transformers_supporter.models.CustomBertConfig
-transformers_supporter.models.CustomBertForSequenceClassification
+AutoConfig (transformers_supporter.models.CustomBertConfig)
+AutoModelForSequenceClassification (transformers_supporter.models.CustomBertForSequenceClassification)
+AutoTokenizer
+pipeline(task="text-classification")
 ```
 
 #### Custom Wav2Vec2
