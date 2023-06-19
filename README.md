@@ -21,13 +21,17 @@ transformers_supporter.register_auto()
 AutoConfig
 AnnForTabularRegression
 AutoFeatureExtractor
+pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularRegressionPipeline)
 ```
 
 ```
-transformers_supporter.models.AnnConfig
-transformers_supporter.models.AnnForTabularClassification
-transformers_supporter.models.TabularFeatureExtractor
+#transformers_supporter.models.AnnConfig
+#transformers_supporter.models.AnnForTabularClassification
+#transformers_supporter.models.TabularFeatureExtractor
 AutoConfig
+AnnForTabularRegression
+AutoFeatureExtractor
+pipeline(task="tabular-classification") (transformers_supporter.pipelines.TabularClassificationPipeline)
 ```
 
 
@@ -44,6 +48,7 @@ transformers_supporter.models.AnnForTabularBinaryClassification
 AutoConfig
 AutoModelForImageClassification
 AutoImageProcessor
+pipeline(task="image-classification")
 ```
 
 ```
@@ -53,6 +58,7 @@ AutoImageProcessor
 AutoConfig
 AutoModelForImageClassification
 AutoImageProcessor
+pipeline(task="image-classification")
 ```
 
 ```
@@ -68,6 +74,7 @@ transformers_supporter.models.CnnForKeyPointDetection
 AutoConfig
 AutoModelForObjectDetection
 AutoImageProcessor
+pipeline(task="object-detection")
 ```
 
 #### Embedded 1dcnn
@@ -133,17 +140,7 @@ import transformers_supporter
 transformers_supporter.register_pipeline()
 ```
 
-### TabularRegressionPipeline
 
-```
-transformers_supporter.pipelines.TabularRegressionPipeline
-```
-
-### TabularClassificationPipeline
-
-```
-transformers_supporter.pipelines.TabularClassificationPipeline
-```
 
 ### CustomImageClassificationPipeline
 
