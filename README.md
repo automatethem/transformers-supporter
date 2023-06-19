@@ -57,11 +57,6 @@ AutoImageProcessor (transformers_supporter.models.GrayscaleImageProcessor)
 pipeline(task="image-classification")
 ```
 
-#### KeyPointDetection
-```
-transformers_supporter.models.CnnForKeyPointDetection
-```
-
 #### object-detection
 
 ```
@@ -69,6 +64,11 @@ AutoConfig (transformers_supporter.models.FasterRcnnConfig)
 AutoModelForObjectDetection (transformers_supporter.models.FasterRcnnForObjectDetection)
 AutoImageProcessor (transformers_supporter.models.FasterRcnnImageProcessor)
 pipeline(task="object-detection")
+```
+
+#### KeyPointDetection
+```
+transformers_supporter.models.CnnForKeyPointDetection
 ```
 
 #### text-classification
