@@ -19,6 +19,8 @@ transformers_supporter.register_auto()
 #transformers_supporter.models.AnnForTabularRegression
 #transformers_supporter.models.TabularFeatureExtractor
 AutoConfig
+AnnForTabularRegression
+AutoFeatureExtractor
 ```
 
 ```
