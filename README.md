@@ -29,7 +29,7 @@ pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularReg
 #transformers_supporter.models.AnnForTabularClassification
 #transformers_supporter.models.TabularFeatureExtractor
 AutoConfig
-AnnForTabularRegression
+AnnForTabularClassification
 AutoFeatureExtractor
 pipeline(task="tabular-classification") (transformers_supporter.pipelines.TabularClassificationPipeline)
 ```
