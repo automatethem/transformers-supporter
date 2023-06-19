@@ -10,9 +10,13 @@ pip install transformers-supporter
 ```
 import transformers_supporter
 transformers_supporter.register_auto()
+transformers_supporter.register_pipeline()
 ```
 
 ### Ann
+
+
+#### tabular-regression
 
 ```
 #transformers_supporter.models.AnnConfig
@@ -23,6 +27,8 @@ AnnForTabularRegression
 AutoFeatureExtractor
 pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularRegressionPipeline)
 ```
+
+#### tabular-classification
 
 ```
 #transformers_supporter.models.AnnConfig
@@ -40,6 +46,8 @@ transformers_supporter.models.AnnForTabularBinaryClassification
 ```
 
 ### Cnn
+
+#### image-classification
 
 ```
 #transformers_supporter.models.CnnConfig
@@ -61,11 +69,12 @@ AutoImageProcessor
 pipeline(task="image-classification")
 ```
 
+#### KeyPointDetection
 ```
 transformers_supporter.models.CnnForKeyPointDetection
 ```
 
-#### Faster Rcnn
+#### object-detection
 
 ```
 #transformers_supporter.models.FasterRcnnConfig
@@ -79,6 +88,8 @@ pipeline(task="object-detection")
 
 ### Rnn
 
+#### audio-classification
+
 ```
 #transformers_supporter.models.RnnConfig
 #transformers_supporter.models.RnnForAudioClassification
@@ -89,11 +100,13 @@ AutoFeatureExtractor
 pipeline(task="audio-classification")
 ```
 
+#### TimeSeriesRegression
+
 ```
 transformers_supporter.models.RnnForTimeSeriesRegression
 ```
 
-#### Embedded Rnn
+#### text-classification
 
 ```
 #EmbeddedRnnConfig
@@ -104,8 +117,6 @@ AutoModelForSequenceClassification
 AutoFeatureExtractor
 ```
 
-#### Pretrained Embedded Rnn
-
 ```
 #PretrainedEmbeddedRnnConfig
 #PretrainedEmbeddedRnnForSequenceClassification
@@ -114,8 +125,6 @@ AutoConfig
 AutoModelForSequenceClassification
 AutoFeatureExtractor
 ```
-
-#### Embedded 1dcnn
 
 ```
 #transformers_supporter.models.Embedded1dcnnConfig
@@ -133,7 +142,7 @@ transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
 
 ### Bert
 
-#### Custom Bert
+#### text-classification
 
 ```
 transformers_supporter.models.CustomBertConfig
@@ -144,13 +153,6 @@ transformers_supporter.models.CustomBertForSequenceClassification
 
 ```
 transformers_supporter.models.CustomWav2Vec2FeatureExtractor
-```
-
-## Supported pipelines
-
-```
-import transformers_supporter
-transformers_supporter.register_pipeline()
 ```
 
 
