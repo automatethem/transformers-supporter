@@ -100,24 +100,6 @@ pipeline("text-classification")
 
 ### Rnn
 
-#### audio-classification
-
-```
-#transformers_supporter.models.RnnConfig
-#transformers_supporter.models.RnnForAudioClassification
-#AutoFeatureExtractor
-AutoConfig
-AutoModelForAudioClassification
-AutoFeatureExtractor
-pipeline(task="audio-classification")
-```
-
-#### TimeSeriesRegression
-
-```
-transformers_supporter.models.RnnForTimeSeriesRegression
-```
-
 #### text-classification
 
 ```
@@ -137,6 +119,25 @@ AutoConfig
 AutoModelForSequenceClassification
 AutoFeatureExtractor
 ```
+
+#### audio-classification
+
+```
+#transformers_supporter.models.RnnConfig
+#transformers_supporter.models.RnnForAudioClassification
+#AutoFeatureExtractor
+AutoConfig
+AutoModelForAudioClassification
+AutoFeatureExtractor
+pipeline(task="audio-classification")
+```
+
+#### TimeSeriesRegression
+
+```
+transformers_supporter.models.RnnForTimeSeriesRegression
+```
+
 
 
 ```
