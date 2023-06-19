@@ -101,7 +101,7 @@ AutoFeatureExtractor (TorchtextFeatureExtractor)
 ```
 AutoConfig (transformers_supporter.models.RnnConfig)
 AutoModelForAudioClassification (transformers_supporter.models.RnnForAudioClassification)
-AutoFeatureExtractor (AutoFeatureExtractor)
+AutoFeatureExtractor (Wav2Vec2, transformers_supporter.models.CustomWav2Vec2FeatureExtractor
 pipeline(task="audio-classification")
 ```
 
@@ -126,12 +126,6 @@ AutoConfig (transformers_supporter.models.CustomBertConfig)
 AutoModelForSequenceClassification (transformers_supporter.models.CustomBertForSequenceClassification)
 AutoTokenizer
 pipeline(task="text-classification")
-```
-
-#### Custom Wav2Vec2
-
-```
-transformers_supporter.models.CustomWav2Vec2FeatureExtractor
 ```
 
 
