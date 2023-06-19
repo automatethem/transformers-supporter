@@ -15,11 +15,22 @@ transformers_supporter.register_auto()
 ### Ann
 
 ```
+#transformers_supporter.models.AnnConfig
+#transformers_supporter.models.AnnForTabularRegression
+#transformers_supporter.models.TabularFeatureExtractor
+AutoConfig
+```
+
+```
 transformers_supporter.models.AnnConfig
-transformers_supporter.models.AnnForTabularRegression
-transformers_supporter.models.AnnForTabularBinaryClassification
 transformers_supporter.models.AnnForTabularClassification
 transformers_supporter.models.TabularFeatureExtractor
+AutoConfig
+```
+
+
+```
+transformers_supporter.models.AnnForTabularBinaryClassification
 ```
 
 ### Cnn
@@ -126,12 +137,6 @@ transformers_supporter.register_pipeline()
 transformers_supporter.pipelines.TabularRegressionPipeline
 ```
 
-### TabularBinaryClassificationPipeline
-
-```
-transformers_supporter.pipelines.TabularBinaryClassificationPipeline
-```
-
 ### TabularClassificationPipeline
 
 ```
@@ -149,3 +154,11 @@ transformers_supporter.pipelines.CustomImageClassificationPipeline
 ```
 transformers_supporter.pipelines.FixedLengthTranslationPipeline
 ```
+
+
+### TabularBinaryClassificationPipeline
+
+```
+transformers_supporter.pipelines.TabularBinaryClassificationPipeline
+```
+
