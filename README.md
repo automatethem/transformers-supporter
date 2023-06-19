@@ -34,8 +34,15 @@ AutoImageProcessor
 ```
 
 ```
+#transformers_supporter.models.CnnConfig
+#transformers_supporter.models.CnnForImageClassification
+#transformers_supporter.models.GrayscaleImageProcessor
+AutoConfig
+AutoModelForImageClassification
+AutoImageProcessor
+```
 
-transformers_supporter.models.GrayscaleImageProcessor
+```
 transformers_supporter.models.CnnForKeyPointDetection
 ```
 
