@@ -34,9 +34,12 @@ transformers_supporter.models.CnnForKeyPointDetection
 #### Faster Rcnn
 
 ```
-transformers_supporter.models.FasterRcnnConfig
-transformers_supporter.models.FasterRcnnForObjectDetection
-transformers_supporter.models.FasterRcnnImageProcessor
+#transformers_supporter.models.FasterRcnnConfig
+#transformers_supporter.models.FasterRcnnForObjectDetection
+#transformers_supporter.models.FasterRcnnImageProcessor
+AutoConfig
+AutoModelForObjectDetection
+AutoImageProcessor
 ```
 
 #### Embedded 1dcnn
