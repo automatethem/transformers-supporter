@@ -57,11 +57,25 @@ transformers_supporter.models.RnnForTimeSeriesRegression
 #### Embedded Rnn
 
 ```
-transformers_supporter.models.EmbeddedRnnConfig
-transformers_supporter.models.EmbeddedRnnForSequenceClassification
+#EmbeddedRnnConfig
+#EmbeddedRnnForSequenceClassification
+#TorchtextFeatureExtractor
+AutoConfig
+AutoModelForSequenceClassification
+AutoFeatureExtractor
+```
+
+```
+#PretrainedEmbeddedRnnConfig
+#PretrainedEmbeddedRnnForSequenceClassification
+#TorchtextFeatureExtractor
+AutoConfig
+AutoModelForSequenceClassification
+AutoFeatureExtractor
+```
+
+```
 transformers_supporter.models.EmbeddedRnnForFixedLengthTranslation
-transformers_supporter.models.PretrainedEmbeddedRnnForSequenceClassification
-transformers_supporter.models.TorchtextTokenizer
 ```
 
 ### Bert
