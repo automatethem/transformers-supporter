@@ -64,14 +64,16 @@ transformers_supporter.models.PretrainedEmbeddedRnnForSequenceClassification
 transformers_supporter.models.TorchtextTokenizer
 ```
 
-### Custom Bert
+### Bert
+
+#### Custom Bert
 
 ```
 transformers_supporter.models.CustomBertConfig
 transformers_supporter.models.CustomBertForSequenceClassification
 ```
 
-### Custom Wav2Vec2
+#### Custom Wav2Vec2
 
 ```
 transformers_supporter.models.CustomWav2Vec2FeatureExtractor
@@ -82,10 +84,34 @@ transformers_supporter.models.CustomWav2Vec2FeatureExtractor
 ```
 import transformers_supporter
 transformers_supporter.register_pipeline()
-  
-transformers_supporter.pipelines.FixedLengthTranslationPipeline
-transformers_supporter.pipelines.TabularBinaryClassificationPipeline
-transformers_supporter.pipelines.TabularClassificationPipeline
+```
+
+### TabularRegressionPipeline
+
+```
 transformers_supporter.pipelines.TabularRegressionPipeline
+```
+
+### TabularBinaryClassificationPipeline
+
+```
+transformers_supporter.pipelines.TabularBinaryClassificationPipeline
+```
+
+### TabularClassificationPipeline
+
+```
+transformers_supporter.pipelines.TabularClassificationPipeline
+```
+
+### CustomImageClassificationPipeline
+
+```
 transformers_supporter.pipelines.CustomImageClassificationPipeline
+```
+
+### FixedLengthTranslationPipeline
+
+```
+transformers_supporter.pipelines.FixedLengthTranslationPipeline
 ```
