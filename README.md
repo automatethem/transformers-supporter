@@ -80,8 +80,13 @@ pipeline(task="object-detection")
 #### Embedded 1dcnn
 
 ```
-transformers_supporter.models.Embedded1dcnnConfig
-transformers_supporter.models.Embedded1dcnnForSequenceClassification
+#transformers_supporter.models.Embedded1dcnnConfig
+#transformers_supporter.models.Embedded1dcnnForSequenceClassification
+#transformers_helper.models.TorchtextFeatureExtractor
+AutoConfig
+AutoModelForForSequenceClassification
+AutoFeatureExtractor
+pipeline("text-classification")
 ```
 
 ### Rnn
