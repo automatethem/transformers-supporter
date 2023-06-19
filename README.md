@@ -5,7 +5,7 @@ pip install transformers-supporter
 
 Supported models 
 
-<pre>
+```
 import transformers_supporter
 transformers_supporter.register_auto()
   
@@ -42,7 +42,7 @@ transformers_supporter.models.Embedded1dcnnForSequenceClassification
 transformers_supporter.models.FasterRcnnConfig
 transformers_supporter.models.FasterRcnnForObjectDetection
 transformers_supporter.models.FasterRcnnImageProcessor
-</pre>
+```
 
 <pre>
 import transformers_supporter
