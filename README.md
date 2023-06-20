@@ -19,6 +19,14 @@ transformers_supporter.register_pipeline()
 #### tabular-regression
 
 ```
+transformers_supporter.models.ann.configuration_ann.AnnConfig (transformers.AutoConfig)
+transformers_supporter.models.ann.modeling_ann.AnnForTabularRegression
+transformers_supporter.models.ann.feature_extraction_ann.TabularFeatureExtractor (transformers.AutoFeatureExtractor)
+transformers_supporter.pipelines.TabularRegressionPipeline (pipeline(task="tabular-regression"))
+```
+
+
+```
 AutoConfig (transformers_supporter.models.AnnConfig)
 (transformers_supporter.models.AnnForTabularRegression)
 AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
