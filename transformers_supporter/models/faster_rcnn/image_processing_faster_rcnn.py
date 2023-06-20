@@ -66,6 +66,7 @@ class FasterRcnnImageProcessor(ImageProcessingMixin):
             labels.append(sub_annotation['category_id'] + 1) #torchvision.models.detection.fasterrcnn_resnet50_fpn 에서는 0 (백그라운드), 1 부터        
         return {'boxes': boxes, 'labels': labels} 
 
+    '''
     def post_process_object_detection(self, outputs, threshold=0.5, target_sizes=None):
         results = []
         for boxes, labels, scores in zip(outputs['boxes'], outputs['labels'], outputs['scores']):
@@ -74,6 +75,7 @@ class FasterRcnnImageProcessor(ImageProcessingMixin):
             scores_ = scores[scores > threshold]
             results.append({"scores": scores_, "labels": labels_, "boxes": boxes_})
         return results
+    '''
 
 def register_auto():
     AutoImageProcessor.register(FasterRcnnImageProcessor, FasterRcnnImageProcessor)
