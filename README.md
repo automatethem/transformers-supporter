@@ -28,10 +28,10 @@ transformers_supporter.pipelines.tabular_regression_pipeline.TabularRegressionPi
 #### tabular-classification
 
 ```
-AutoConfig (transformers_supporter.models.AnnConfig)
-(transformers_supporter.models.AnnForTabularClassification)
-AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
-pipeline(task="tabular-classification") (transformers_supporter.pipelines.TabularClassificationPipeline)
+transformers_supporter.models.ann.configuration_ann.AnnConfig (transformers.AutoConfig)
+transformers_supporter.models.ann.modeling_ann.AnnForTabularClassification
+transformers_supporter.models.ann.feature_extraction_ann.TabularFeatureExtractor (transformers.AutoFeatureExtractor)
+transformers_supporter.pipelines.tabular_regression_pipeline.TabularClassificationPipeline (pipeline(task="tabular-classification"))
 ```
 
 
