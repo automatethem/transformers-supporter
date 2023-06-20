@@ -25,14 +25,6 @@ transformers_supporter.models.ann.feature_extraction_ann.TabularFeatureExtractor
 transformers_supporter.pipelines.tabular_regression_pipeline.TabularRegressionPipeline (pipeline(task="tabular-regression"))
 ```
 
-
-```
-AutoConfig (transformers_supporter.models.AnnConfig)
-(transformers_supporter.models.AnnForTabularRegression)
-AutoFeatureExtractor (transformers_supporter.models.TabularFeatureExtractor)
-pipeline(task="tabular-regression") (transformers_supporter.pipelines.TabularRegressionPipeline)
-```
-
 #### tabular-classification
 
 ```
