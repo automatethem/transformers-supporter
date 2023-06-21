@@ -4,7 +4,7 @@ from transformers import AutoModel
 from transformers import AutoTokenizer
 from transformers import AutoConfig
 from transformers import AutoModelForSequenceClassification
-from .configuration_embedded_rnn import PretrainedEmbeddedRnnConfig
+from .configuration_pretrained_embedded_rnn import PretrainedEmbeddedRnnConfig
 import torch
 from torch.nn import functional as F
 from torchtext.vocab import build_vocab_from_iterator, Vectors
