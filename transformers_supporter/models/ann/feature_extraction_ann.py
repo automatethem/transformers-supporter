@@ -74,7 +74,7 @@ class TabularFeatureExtractor(FeatureExtractionMixin):
                     labels = TabularFeatureExtractor.le.transform(labels)
 
             if self.labels_type == 'long':
-                labels = np.array(labels, dtype=np.long)
+                labels = np.array(labels, dtype=np.longlong)
             elif self.labels_type == 'float':
                 labels = np.array(labels, dtype=np.float32)
 
