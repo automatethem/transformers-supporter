@@ -60,6 +60,9 @@ def register_auto():
     modeling_embedded_rnn.register_auto()
     feature_extraction_embedded_rnn.register_auto()
 
+    configuration_pretrained_embedded_rnn.register_auto()
+    modeling_pretrained_embedded_rnn.register_auto()
+
     configuration_faster_rcnn.register_auto()
     modeling_faster_rcnn.register_auto()
     image_processing_faster_rcnn.register_auto()
