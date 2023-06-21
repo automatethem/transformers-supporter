@@ -1,3 +1,4 @@
+'''
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel
 from transformers import AutoModel
@@ -67,6 +68,7 @@ class EmbeddedRnnForFixedLengthTranslation(PreTrainedModel):
             #print(labels_.shape) #torch.Size([6])
             loss = F.nll_loss(F.log_softmax(logits_), labels_) #원핫 벡터를 넣을 필요없이 바로 실제값을 인자로 사용 #nll은 Negative Log Likelihood의 약자
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
+'''
 
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel
@@ -120,6 +122,6 @@ class PretrainedEmbeddedRnnForSequenceClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
 def register_auto():
-    AutoModelForSequenceClassification.register(EmbeddedRnnConfig, EmbeddedRnnForSequenceClassification)
-    #AutoModelForFixedLengthTranslation.register(EmbeddedRnnConfig, EmbeddedRnnForFixedLengthTranslation)
+    ##AutoModelForSequenceClassification.register(EmbeddedRnnConfig, EmbeddedRnnForSequenceClassification)
+    ###AutoModelForFixedLengthTranslation.register(EmbeddedRnnConfig, EmbeddedRnnForFixedLengthTranslation)
     AutoModelForSequenceClassification.register(PretrainedEmbeddedRnnConfig, PretrainedEmbeddedRnnForSequenceClassification)
