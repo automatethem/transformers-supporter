@@ -23,6 +23,9 @@ from .models.embedded_rnn import configuration_embedded_rnn
 from .models.embedded_rnn import modeling_embedded_rnn
 from .models.embedded_rnn import feature_extraction_embedded_rnn
 
+from .models.pretrained_embedded_rnn import configuration_pretrained_embedded_rnn
+from .models.pretrained_embedded_rnn import modeling_pretrained_embedded_rnn
+
 from .models.faster_rcnn import configuration_faster_rcnn
 from .models.faster_rcnn import modeling_faster_rcnn
 from .models.faster_rcnn import image_processing_faster_rcnn
