@@ -1,3 +1,5 @@
+#https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.ImageClassificationPipeline
+#https://github.com/huggingface/transformers/blob/v4.30.0/src/transformers/pipelines/image_classification.py#L32
 from transformers import Pipeline
 from transformers.pipelines import PIPELINE_REGISTRY
 from torch.nn import functional as F
