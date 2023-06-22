@@ -8,10 +8,10 @@ import torch
 from torch.nn import functional as F
 import pytorch_supporter
 import transformers
-from .configuration_custom_bert import CustomBertConfig
+from .configuration_bert import BertConfig
 
 '''
-class CustomBertForSequenceClassification(PreTrainedModel):
+class BertForSequenceClassification(PreTrainedModel):
     config_class = CustomBertConfig
 
     def __init__(self, config):
@@ -34,8 +34,8 @@ class CustomBertForSequenceClassification(PreTrainedModel):
 '''
 #'''
 #torch.nn.Sequential 버전
-class CustomBertForSequenceClassification(PreTrainedModel):
-    config_class = CustomBertConfig
+class BertForSequenceClassification(PreTrainedModel):
+    config_class = BertConfig
 
     def __init__(self, config):
         super().__init__(config)
@@ -57,4 +57,4 @@ class CustomBertForSequenceClassification(PreTrainedModel):
 #'''
 
 def register_auto():
-    AutoModelForSequenceClassification.register(CustomBertConfig, CustomBertForSequenceClassification)
+    AutoModelForSequenceClassification.register(BertConfig, BertForSequenceClassification)
