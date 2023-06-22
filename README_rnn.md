@@ -2,7 +2,9 @@
 
 ### text-classification
 
-#### english
+#### per word
+
+##### english
 
 imdb-movie-review-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/imdb-movie-review-text-classification-model-transformers-custom-supporter
@@ -114,7 +116,7 @@ feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, device=device)
 ```
 
-#### korean
+##### korean
 
 naver-movie-review-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-supporter
@@ -125,7 +127,9 @@ https://github.com/automatethem-back-model/naver-movie-review-text-classificatio
 car-name-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/car-name-text-classification-model-transformers-custom-supporter
 
-#### char (korean)
+#### per word
+
+##### korean
 
 ```
 import torch
