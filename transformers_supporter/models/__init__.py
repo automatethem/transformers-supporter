@@ -3,7 +3,6 @@ from . import cnn
 from . import rnn
 from . import embedded_rnn
 from . import custom_bert
-from . import wav2vec2
 from . import faster_rcnn
 
 from .ann.configuration_ann import AnnConfig
@@ -21,6 +20,7 @@ from .cnn.image_processing_cnn import KeyPointImageProcessor
 from .rnn.configuration_rnn import RnnConfig
 from .rnn.modeling_rnn import RnnForAudioClassification
 from .rnn.modeling_rnn import RnnForTimeSeriesRegression
+from .rnn.modeling_rnn import Wav2Vec2FeatureExtractor
 
 from .embedded_rnn.configuration_embedded_rnn import EmbeddedRnnConfig
 from .embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForSequenceClassification
@@ -35,8 +35,6 @@ from .embedded_1dcnn.modeling_embedded_1dcnn import Embedded1dcnnForSequenceClas
 
 from .custom_bert.configuration_custom_bert import CustomBertConfig
 from .custom_bert.modeling_custom_bert import CustomBertForSequenceClassification
-
-from .wav2vec2.feature_extraction_wav2vec2 import Wav2Vec2FeatureExtractor
 
 from .faster_rcnn.configuration_faster_rcnn import FasterRcnnConfig
 from .faster_rcnn.modeling_faster_rcnn import FasterRcnnForObjectDetection
