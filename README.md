@@ -14,12 +14,6 @@ pip install transformers-supporter
 
 ```
 
-Custom Bert
-text-classification
-AutoConfig (transformers_supporter.models.CustomBertConfig)
-AutoModelForSequenceClassification (transformers_supporter.models.CustomBertForSequenceClassification)
-AutoTokenizer
-pipeline(task="text-classification")
 
 Cnn
 KeyPointDetection. 
