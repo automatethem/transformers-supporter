@@ -11,12 +11,12 @@ class TabularClassificationPipeline(Pipeline):
         if "top_k" in kwargs:
             preprocess_kwargs["top_k"] = kwargs["top_k"]
         return preprocess_kwargs, {}, postprocess_kwargs
+        
+    def _forward(self, model_inputs):
+        return self.model(**model_inputs)
 
     def preprocess(self, inputs, transformer_path=None):
         return self.feature_extractor(inputs, transformer_path=transformer_path, return_tensors=self.framework)        
-
-    def _forward(self, model_inputs):
-        return self.model(**model_inputs)
 
     def postprocess(self, model_outputs, top_k=None):
         logits = model_outputs['logits']
