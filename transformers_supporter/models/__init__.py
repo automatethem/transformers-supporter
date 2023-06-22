@@ -20,7 +20,7 @@ from .cnn.image_processing_cnn import KeyPointImageProcessor
 from .rnn.configuration_rnn import RnnConfig
 from .rnn.modeling_rnn import RnnForAudioClassification
 from .rnn.modeling_rnn import RnnForTimeSeriesRegression
-from .rnn.modeling_rnn import Wav2Vec2FeatureExtractor
+from .rnn.feature_extraction_rnn import Wav2Vec2FeatureExtractor
 
 from .embedded_rnn.configuration_embedded_rnn import EmbeddedRnnConfig
 from .embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForSequenceClassification
