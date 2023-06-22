@@ -33,12 +33,6 @@ from .models.faster_rcnn import image_processing_faster_rcnn
 from .models.rnn import configuration_rnn
 from .models.rnn import modeling_rnn
 
-from .pipelines import tabular_regression_pipeline
-from .pipelines import tabular_binary_classification_pipeline
-from .pipelines import tabular_classification_pipeline
-from .pipelines import custom_image_classification_pipeline
-from .pipelines import fixed_length_translation_pipeline
-
 def register_auto():
     configuration_ann.register_auto()
     modeling_ann.register_auto()
