@@ -2,7 +2,7 @@ from . import ann
 from . import cnn
 from . import rnn
 from . import embedded_rnn
-from . import bert
+from . import custom_bert
 from . import wav2vec2
 from . import faster_rcnn
 
@@ -33,8 +33,8 @@ from .pretrained_embedded_rnn.modeling_pretrained_embedded_rnn import Pretrained
 from .embedded_1dcnn.configuration_embedded_1dcnn import Embedded1dcnnConfig
 from .embedded_1dcnn.modeling_embedded_1dcnn import Embedded1dcnnForSequenceClassification
 
-from .bert.configuration_bert import BertConfig
-from .bert.modeling_bert import BertForSequenceClassification
+from .custom_bert.configuration_custom_bert import CustomBertConfig
+from .custom_bert.modeling_custom_bert import CustomBertForSequenceClassification
 
 from .wav2vec2.feature_extraction_wav2vec2 import Wav2Vec2FeatureExtractor
 
