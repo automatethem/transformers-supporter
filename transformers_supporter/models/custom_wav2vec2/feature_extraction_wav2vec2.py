@@ -6,7 +6,7 @@ from transformers import AutoFeatureExtractor
 from torchvision import transforms
 
 #Custom Feature extractor class for Wav2Vec2 (https://github.com/huggingface/transformers/blob/main/src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py)
-class CustomWav2Vec2FeatureExtractor(FeatureExtractionMixin):
+class Wav2Vec2FeatureExtractor(FeatureExtractionMixin):
     def __init__(self, sampling_rate=16000, **kwargs):
         super().__init__(**kwargs)
         self.sampling_rate = sampling_rate
@@ -49,4 +49,4 @@ class CustomWav2Vec2FeatureExtractor(FeatureExtractionMixin):
         return normed_input_values
 
 def register_auto():
-    AutoFeatureExtractor.register(CustomWav2Vec2FeatureExtractor, CustomWav2Vec2FeatureExtractor)
+    AutoFeatureExtractor.register(Wav2Vec2FeatureExtractor, Wav2Vec2FeatureExtractor)
