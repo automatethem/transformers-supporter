@@ -339,6 +339,17 @@ feature_extractor = AutoFeatureExtractor.from_pretrained(model_path)
 pl = pipeline(task='audio-classification', model=model, feature_extractor=feature_extractor, device=device)
 ```
 
+```
+from transformers_supporter.models.rnn.feature_extraction_wav2vec2 import Wav2Vec2FeatureExtractor
+feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(model_path)
+```
+
+```
+from transformers_supporter.models.rnn import feature_extraction_wav2vec2
+feature_extraction_wav2vec2.register_auto()
+feature_extractor = AutoFeatureExtractor.from_pretrained(model_path)
+```
+
 ## translation
 
 ### word fixed length
