@@ -53,8 +53,8 @@ pl = ImageClassificationPipeline(model=model, image_processor=image_processor, d
 ```
 
 ```
-import transformers_supporter
-transformers_supporter.register_pipeline()
+from transformers_supporter.pipelines import image_classification_pipeline
+image_classification_pipeline.register_pipeline()
 pl = pipeline(task='image-classification', model=model, image_processor=image_processor, device=device)
 ```
 
