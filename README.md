@@ -14,9 +14,6 @@ pip install transformers-supporter
 
 ```
 
-Ran
-TimeSeriesRegression
-transformers_supporter.models.RnnForTimeSeriesRegression
 
 pipelines
 CustomImageClassificationPipeline
