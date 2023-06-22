@@ -63,6 +63,8 @@ pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, d
 imdb-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-supporte  
 https://github.com/automatethem-back-model/imdb-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-supporte
 
+pretrained
+
 ```
 import torch
 from transformers_supporter.models.pretrained_embedded_rnn.configuration_pretrained_embedded_rnn import PretrainedEmbeddedRnnConfig
@@ -125,6 +127,8 @@ naver-movie-review-text-classification-model-transformers-custom-pretrained-embe
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-support
 
 #### per char
+
+##### english
 
 ##### korean
 
