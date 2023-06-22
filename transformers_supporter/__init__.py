@@ -3,6 +3,7 @@ from . import pipelines
 
 #
 
+'''
 from .models.ann import configuration_ann
 from .models.ann import feature_extraction_ann
 from .models.ann import modeling_ann
@@ -74,3 +75,4 @@ def register_pipeline():
     tabular_classification_pipeline.register_pipeline()
     image_classification_pipeline.register_pipeline()
     fixed_length_translation_pipeline.register_pipeline()
+'''
