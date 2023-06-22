@@ -2,7 +2,6 @@
 
 ### image-classification
 
-ok  
 rock-paper-scissors-image-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/rock-paper-scissors-image-classification-model-transformers-custom-supporter
 
@@ -48,7 +47,6 @@ image_processor = AutoImageProcessor.from_pretrained(model_path)
 pl = pipeline(task='image-classification', model=model, image_processor=image_processor, device=device)
 ```
 
-ok  
 mnist-hand-written-digit-image-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/mnist-hand-written-digit-image-classification-model-transformers-custom-supporter
 
