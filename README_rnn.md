@@ -60,10 +60,10 @@ feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, device=device)
 ```
 
+pretrained
+
 imdb-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-supporte  
 https://github.com/automatethem-back-model/imdb-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-supporte
-
-pretrained
 
 ```
 import torch
@@ -123,7 +123,6 @@ pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, d
 naver-movie-review-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-supporter
 
-
 ```
 import torch
 from transformers_supporter.models.embedded_rnn.configuration_embedded_rnn import EmbeddedRnnConfig
@@ -175,11 +174,10 @@ feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, device=device)
 ```
 
+pretrained
+
 naver-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-support  
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-support
-
-
-pretrained
 
 ```
 import torch
