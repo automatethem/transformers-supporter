@@ -454,3 +454,8 @@ model = EmbeddedRnnForFixedLengthTranslation.from_pretrained(model_path)
 feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = FixedLengthTranslationPipeline(model=model, tokenizer=feature_extractor, device=device)
 ```
+
+## time-series-regression
+
+samsung-electronics-stock-close-price-time-series-regression-model-transformers-custom-supporter  
+https://github.com/automatethem-back-model/samsung-electronics-stock-close-price-time-series-regression-model-transformers-custom-supporter  
