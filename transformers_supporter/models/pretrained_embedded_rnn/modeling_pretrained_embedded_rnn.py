@@ -9,6 +9,7 @@ import torch
 from torch.nn import functional as F
 from torchtext.vocab import build_vocab_from_iterator, Vectors
 import transformers
+import pytorch_supporter
 
 class PretrainedEmbeddedRnnForSequenceClassification(PreTrainedModel):
     config_class = PretrainedEmbeddedRnnConfig
