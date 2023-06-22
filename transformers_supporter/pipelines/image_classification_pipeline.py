@@ -4,7 +4,7 @@ from transformers import Pipeline
 from transformers.pipelines import PIPELINE_REGISTRY
 from torch.nn import functional as F
 
-class CustomImageClassificationPipeline(Pipeline):
+class ImageClassificationPipeline(Pipeline):
     def _sanitize_parameters(self, **kwargs):
         preprocess_kwargs = {}
         postprocess_kwargs = {}
@@ -31,6 +31,6 @@ class CustomImageClassificationPipeline(Pipeline):
         return results
 
 def register_pipeline():
-    PIPELINE_REGISTRY.register_pipeline('custom-image-classification', 
+    PIPELINE_REGISTRY.register_pipeline('image-classification', 
                                     #pt_model=AutoModelForImageClassification,
-                                    pipeline_class=CustomImageClassificationPipeline)
+                                    pipeline_class=ImageClassificationPipeline)
