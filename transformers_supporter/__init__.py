@@ -15,8 +15,6 @@ from .models.cnn import image_processing_cnn
 from .models.custom_bert import configuration_custom_bert
 from .models.custom_bert import modeling_custom_bert
 
-from .models.wav2vec2 import feature_extraction_wav2vec2
-
 from .models.embedded_1dcnn import configuration_embedded_1dcnn
 from .models.embedded_1dcnn import modeling_embedded_1dcnn
 
@@ -33,6 +31,7 @@ from .models.faster_rcnn import image_processing_faster_rcnn
 
 from .models.rnn import configuration_rnn
 from .models.rnn import modeling_rnn
+from .models.rnn import feature_extraction_rnn
 
 def register_auto():
     configuration_ann.register_auto()
@@ -45,8 +44,6 @@ def register_auto():
 
     configuration_custom_bert.register_auto()
     modeling_custom_bert.register_auto()
-
-    feature_extraction_wav2vec2.register_auto()
 
     configuration_embedded_1dcnn.register_auto()
     modeling_embedded_1dcnn.register_auto()
@@ -64,7 +61,8 @@ def register_auto():
 
     configuration_rnn.register_auto()
     modeling_rnn.register_auto()
-
+    feature_extraction_rnn.register_auto()
+    
 from .pipelines import tabular_regression_pipeline
 from .pipelines import tabular_classification_pipeline
 from .pipelines import image_classification_pipeline
