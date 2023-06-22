@@ -124,12 +124,12 @@ https://github.com/automatethem-back-model/naver-movie-review-text-classificatio
 naver-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-support  
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-pretrained-embedded-rnn-support
 
-car-name-text-classification-model-transformers-custom-supporter  
-https://github.com/automatethem-back-model/car-name-text-classification-model-transformers-custom-supporter
-
 #### per char
 
 ##### korean
+
+car-name-text-classification-model-transformers-custom-supporter  
+https://github.com/automatethem-back-model/car-name-text-classification-model-transformers-custom-supporter
 
 ```
 import torch
