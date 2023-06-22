@@ -14,11 +14,6 @@ pip install transformers-supporter
 
 ```
 
-
-Cnn
-KeyPointDetection. 
-transformers_supporter.models.CnnForKeyPointDetection
-
 Ran
 TimeSeriesRegression
 transformers_supporter.models.RnnForTimeSeriesRegression
