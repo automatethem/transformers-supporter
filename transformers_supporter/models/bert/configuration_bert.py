@@ -9,8 +9,8 @@ from torch.nn import functional as F
 import pytorch_supporter
 import transformers
 
-class BertConfig(PretrainedConfig):
-    model_type = "bert"
+class CustomBertConfig(PretrainedConfig):
+    model_type = "custom-bert"
 
     def __init__(self, **kwargs):
         #https://github.com/huggingface/transformers/blob/98d88b23f54e5a23e741833f1e973fdf600cc2c5/src/transformers/configuration_utils.py#L323
@@ -18,4 +18,4 @@ class BertConfig(PretrainedConfig):
         super().__init__(**kwargs)
 
 def register_auto():
-    AutoConfig.register("bert", BertConfig)
+    AutoConfig.register("custom-bert", CustomBertConfig)
