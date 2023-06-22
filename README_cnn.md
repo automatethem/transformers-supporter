@@ -47,6 +47,11 @@ image_processor = AutoImageProcessor.from_pretrained(model_path)
 pl = pipeline(task='image-classification', model=model, image_processor=image_processor, device=device)
 ```
 
+```
+from transformers_supporter.pipelines.image_classification_pipeline import ImageClassificationPipeline
+pl = ImageClassificationPipeline(model=model, image_processor=image_processor, device=device)
+```
+
 mnist-hand-written-digit-image-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/mnist-hand-written-digit-image-classification-model-transformers-custom-supporter
 
