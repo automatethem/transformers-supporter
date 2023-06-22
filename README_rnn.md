@@ -2,6 +2,8 @@
 
 ### text-classification
 
+#### english
+
 imdb-movie-review-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/imdb-movie-review-text-classification-model-transformers-custom-supporter
 
@@ -112,6 +114,8 @@ feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, device=device)
 ```
 
+#### korean
+
 naver-movie-review-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/naver-movie-review-text-classification-model-transformers-custom-supporter
 
@@ -120,6 +124,8 @@ https://github.com/automatethem-back-model/naver-movie-review-text-classificatio
 
 car-name-text-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/car-name-text-classification-model-transformers-custom-supporter
+
+#### char (korean)
 
 ```
 import torch
@@ -221,6 +227,8 @@ pl = pipeline(task='audio-classification', model=model, feature_extractor=featur
 
 ### translation
 
+#### char fixed length
+
 char-fixed-length-translation-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/char-fixed-length-translation-model-transformers-custom-supporter  
 
@@ -275,6 +283,8 @@ model = EmbeddedRnnForFixedLengthTranslation.from_pretrained(model_path)
 feature_extractor = TorchtextFeatureExtractor.from_pretrained(model_path)
 pl = FixedLengthTranslationPipeline(model=model, tokenizer=feature_extractor, device=device)
 ```
+
+#### word fixed length
 
 word-fixed-length-translation-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/word-fixed-length-translation-model-transformers-custom-supporter
