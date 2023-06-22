@@ -11,16 +11,3 @@ pip install transformers-supporter
 [CNN](README_cnn.md)  
 [RNN](README_rnn.md)  
 [BERT](README_bert.md)
-
-```
-
-
-pipelines
-CustomImageClassificationPipeline
-transformers_supporter.pipelines.CustomImageClassificationPipeline
-
-TabularBinaryClassificationPipeline
-transformers_supporter.pipelines.TabularBinaryClassificationPipeline
-
-
-```
