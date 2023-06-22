@@ -177,6 +177,48 @@ pl = pipeline('text-classification', model=model, tokenizer=feature_extractor, d
 speech-command-audio-classification-model-transformers-custom-supporter  
 https://github.com/automatethem-back-model/speech-command-audio-classification-model-transformers-custom-supporter
 
+```
+import torch
+from transformers_supporter.models.rnn.configuration_rnn import RnnConfig
+from transformers_supporter.models.rnn.modeling_rnn import RnnForAudioClassification
+from transformers import AutoFeatureExtractor
+
+model_path = 'facebook/wav2vec2-base'
+feature_extractor = AutoFeatureExtractor.from_pretrained(model_path)
+
+config = RnnConfig(
+    num_labels=len(id2label),
+    id2label=id2label,
+    label2id=label2id
+)
+model = RnnForAudioClassification(config)
+model = model.to(device)
+
+model_path = '/Users/automatethem/models/speech-command-audio-classification-model-transformers-custom-supporter'
+model.save_pretrained(model_path)
+feature_extractor.save_pretrained(model_path)
+```
+
+```
+import torch
+from transformers_supporter.models.rnn.modeling_rnn import RnnForAudioClassification
+from transformers import AutoFeatureExtractor
+from transformers import pipeline
+
+device = "cpu"
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+
+#model_path = '/Users/automatethem/models/speech-command-audio-classification-model-transformers-custom-supporter'
+model_path = 'automatethem-back-model/speech-command-audio-classification-model-transformers-custom-supporter'
+model = RnnForAudioClassification.from_pretrained(model_path)
+model_path = 'facebook/wav2vec2-base'
+feature_extractor = AutoFeatureExtractor.from_pretrained(model_path)
+pl = pipeline(task='audio-classification', model=model, feature_extractor=feature_extractor, device=device)
+```
+
 ### translation
 
 char-fixed-length-translation-model-transformers-custom-supporter  
