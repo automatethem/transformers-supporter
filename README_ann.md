@@ -103,4 +103,3 @@ feature_extractor = TabularFeatureExtractor.from_pretrained(model_path)
 pl = TabularClassificationPipeline(model=model, feature_extractor=feature_extractor, device=device)
 ```
 
-https://github.com/automatethem-back-model/iris-tabular-classification-model-transformers-custom-supporter-auto
