@@ -14,7 +14,7 @@ from .models.cnn import image_processing_cnn
 from .models.custom_bert import configuration_custom_bert
 from .models.custom_bert import modeling_custom_bert
 
-from .models.custom_wav2vec2 import feature_extraction_custom_wav2vec2
+from .models.wav2vec2 import feature_extraction_wav2vec2
 
 from .models.embedded_1dcnn import configuration_embedded_1dcnn
 from .models.embedded_1dcnn import modeling_embedded_1dcnn
@@ -45,7 +45,7 @@ def register_auto():
     configuration_custom_bert.register_auto()
     modeling_custom_bert.register_auto()
 
-    feature_extraction_custom_wav2vec2.register_auto()
+    feature_extraction_wav2vec2.register_auto()
 
     configuration_embedded_1dcnn.register_auto()
     modeling_embedded_1dcnn.register_auto()
