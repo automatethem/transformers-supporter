@@ -38,15 +38,19 @@ class TabularClassificationPipeline(Pipeline):
         outputs = F.softmax(outputs, dim=-1)
         #print(outputs.shape) #torch.Size([1, 3])
         postprocessed = []
-        for scores in outputs:
-            label = self.model.config.id2label[scores.argmax().item()]
-            score = scores[scores.argmax()]
-            postprocessed.append({'label': label, 'score': score.item()})   
-        postprocessed.sort(key=lambda x: x['score'], reverse=True)
-        if top_k != None:
-            postprocessed = postprocessed[:top_k]            
+        for output in outputs:
+            line = []
+            for i, score in enumerate(output):
+                label = self.model.config.id2label[i]
+                line.append({'label': label, 'score': score.item()})
+                line.sort(key=lambda x: x['score'], reverse=True)
+                if top_k != None:
+                    line = line[:top_k] 
+            postprocessed.append(line)
+        if len(postprocessed) == 1:
+            return postprocessed[0]
         return postprocessed
-        
+
 def register_pipeline():
     PIPELINE_REGISTRY.register_pipeline('tabular-classification', 
                                     #pt_model=AutoModelForTabularClassification
