@@ -48,13 +48,13 @@ pl = pipeline(task='image-classification', model=model, image_processor=image_pr
 ```
 
 ```
-from transformers_supporter.pipelines.image_classification_pipeline import ImageClassificationPipeline
+from transformers_supporter.pipelines.image_classification import ImageClassificationPipeline
 pl = ImageClassificationPipeline(model=model, image_processor=image_processor, device=device)
 ```
 
 ```
-from transformers_supporter.pipelines import image_classification_pipeline
-image_classification_pipeline.register_pipeline()
+from transformers_supporter.pipelines import image_classification
+image_classification.register_pipeline()
 pl = pipeline(task='image-classification', model=model, image_processor=image_processor, device=device)
 ```
 
