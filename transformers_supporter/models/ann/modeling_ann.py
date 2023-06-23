@@ -109,6 +109,6 @@ class AnnForTabularBinaryClassification(PreTrainedModel):
 
 def register_auto():
     #AutoModelForTabularRegression.register(AnnConfig, AnnForTabularRegression)
-    #AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification) 
     #AutoModelForTabularClassification.register(AnnConfig, AnnForTabularClassification)
+    #AutoModelForTabularClassification.register(AnnConfig, AnnForTabularBinaryClassification) 
     pass
