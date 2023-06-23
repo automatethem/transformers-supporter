@@ -63,9 +63,9 @@ class TabularClassificationPipeline(Pipeline):
             for i, score in enumerate(logit):
                 label = self.model.config.id2label[i]
                 line.append({'label': label, 'score': score.item()})
-                line.sort(key=lambda x: x['score'], reverse=True)
-                if top_k != None:
-                    line = line[:top_k] 
+            line.sort(key=lambda x: x['score'], reverse=True)
+            if top_k != None:
+                line = line[:top_k] 
             postprocessed.append(line)
         if len(postprocessed) == 1:
             return postprocessed[0]
