@@ -394,7 +394,7 @@ feature_extractor.save_pretrained(model_path)
 import torch
 from transformers_supporter.models.embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForFixedLengthTranslation
 from transformers_supporter.models.embedded_rnn.feature_extraction_embedded_rnn import TorchtextFeatureExtractor
-from transformers_supporter.pipelines.fixed_length_translation_pipeline import FixedLengthTranslationPipeline
+from transformers_supporter.pipelines.fixed_length_translation import FixedLengthTranslationPipeline
 
 device = "cpu"
 if torch.cuda.is_available():
@@ -451,7 +451,7 @@ feature_extractor.save_pretrained(model_path)
 import torch
 from transformers_supporter.models.embedded_rnn.modeling_embedded_rnn import EmbeddedRnnForFixedLengthTranslation
 from transformers_supporter.models.embedded_rnn.feature_extraction_embedded_rnn import TorchtextFeatureExtractor
-from transformers_supporter.pipelines.fixed_length_translation_pipeline import FixedLengthTranslationPipeline
+from transformers_supporter.pipelines.fixed_length_translation import FixedLengthTranslationPipeline
 
 device = "cpu"
 if torch.cuda.is_available():
