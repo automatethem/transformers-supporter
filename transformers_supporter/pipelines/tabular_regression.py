@@ -16,11 +16,11 @@ class TabularRegressionPipeline(Pipeline):
         return self.model(**model_inputs)
 
     def postprocess(self, model_outputs):
-        outputs = model_outputs['logits']
-        #print(outputs.shape) #torch.Size([1, 1])
+        logits = model_outputs['logits']
+        #print(logits.shape) #torch.Size([1, 1])
         postprocessed = []
-        for logits in outputs:
-            postprocessed.append({"logit": logits[0].item()})        
+        for logit in logits:
+            postprocessed.append({"logit": logit[0].item()})        
         return postprocessed
 
 def register_pipeline():
