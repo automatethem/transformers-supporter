@@ -35,7 +35,7 @@ feature_extractor.save_pretrained(model_path)
 import torch
 from transformers_supporter.models.ann.modeling_ann import AnnForTabularRegression
 from transformers_supporter.models.ann.feature_extraction_ann import TabularFeatureExtractor
-from transformers_supporter.pipelines.tabular_regression_pipeline import TabularRegressionPipeline
+from transformers_supporter.pipelines.tabular_regression import TabularRegressionPipeline
 
 device = "cpu"
 if torch.cuda.is_available():
@@ -88,7 +88,7 @@ feature_extractor.save_pretrained(model_path)
 import torch
 from transformers_supporter.models.ann.modeling_ann import AnnForTabularRegression
 from transformers_supporter.models.ann.feature_extraction_ann import TabularFeatureExtractor
-from transformers_supporter.pipelines.tabular_regression_pipeline import TabularClassificationPipeline
+from transformers_supporter.pipelines.tabular_regression import TabularClassificationPipeline
 
 device = "cpu"
 if torch.cuda.is_available():
