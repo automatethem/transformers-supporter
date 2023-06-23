@@ -18,7 +18,7 @@ class ImageClassificationPipeline(Pipeline):
     def _forward(self, model_inputs):
         return self.model(**model_inputs)
 
-    def postprocess(self, model_outputs, top_k=None):
+    def postprocess(self, model_outputs, top_k=5):
         logits = model_outputs['logits']
         #print(logits.shape) #torch.Size([1, 3])
         logits = F.softmax(logits, dim=-1)
