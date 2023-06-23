@@ -7,7 +7,6 @@ from . import faster_rcnn
 
 from .ann.configuration_ann import AnnConfig
 from .ann.modeling_ann import AnnForTabularRegression
-from .ann.modeling_ann import AnnForTabularBinaryClassification
 from .ann.modeling_ann import AnnForTabularClassification
 from .ann.feature_extraction_ann import TabularFeatureExtractor
 
