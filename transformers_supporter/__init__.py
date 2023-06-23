@@ -63,14 +63,14 @@ def register_auto():
     modeling_rnn.register_auto()
     feature_extraction_rnn.register_auto()
     
-from .pipelines import tabular_regression_pipeline
-from .pipelines import tabular_classification_pipeline
-from .pipelines import image_classification_pipeline
-from .pipelines import fixed_length_translation_pipeline
+from .pipelines import tabular_regression
+from .pipelines import tabular_classification
+from .pipelines import image_classification
+from .pipelines import fixed_length_translation
 
 def register_pipeline():
-    tabular_regression_pipeline.register_pipeline()
-    tabular_classification_pipeline.register_pipeline()
-    image_classification_pipeline.register_pipeline()
-    fixed_length_translation_pipeline.register_pipeline()
+    tabular_regression.register_pipeline()
+    tabular_classification.register_pipeline()
+    image_classification.register_pipeline()
+    fixed_length_translation.register_pipeline()
 '''
