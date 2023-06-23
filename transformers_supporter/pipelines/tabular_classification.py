@@ -18,40 +18,6 @@ class TabularClassificationPipeline(Pipeline):
     def _forward(self, model_inputs):
         return self.model(**model_inputs)
 
-    '''
-    def postprocess(self, model_outputs, top_k=None):
-        logits = model_outputs['logits']
-        probabilities = F.softmax(logits, dim=-1)
-        results = []
-        for probability in probabilities:
-            label = self.model.config.id2label[probability.argmax().item()]
-            probability = probabilities[0][probability.argmax()]
-            results.append({'label': label, 'score': probability.item()})   
-        results.sort(key=lambda x: x['score'], reverse=True)
-        if top_k != None:
-            results = results[:top_k]            
-        return results
-    '''
-    '''
-    def postprocess(self, model_outputs, top_k=None):
-        outputs = model_outputs['logits']
-        #print(outputs.shape) #torch.Size([1, 3])
-        outputs = F.softmax(outputs, dim=-1)
-        #print(outputs.shape) #torch.Size([1, 3])
-        postprocessed = []
-        for output in outputs:
-            line = []
-            for i, score in enumerate(output):
-                label = self.model.config.id2label[i]
-                line.append({'label': label, 'score': score.item()})
-                line.sort(key=lambda x: x['score'], reverse=True)
-                if top_k != None:
-                    line = line[:top_k] 
-            postprocessed.append(line)
-        if len(postprocessed) == 1:
-            return postprocessed[0]
-        return postprocessed
-    '''
     def postprocess(self, model_outputs, top_k=None):
         logits = model_outputs['logits']
         #print(logits.shape) #torch.Size([1, 3])
