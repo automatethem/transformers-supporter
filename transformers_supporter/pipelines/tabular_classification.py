@@ -32,6 +32,7 @@ class TabularClassificationPipeline(Pipeline):
             results = results[:top_k]            
         return results
     '''
+    '''
     def postprocess(self, model_outputs, top_k=None):
         outputs = model_outputs['logits']
         #print(outputs.shape) #torch.Size([1, 3])
@@ -50,7 +51,26 @@ class TabularClassificationPipeline(Pipeline):
         if len(postprocessed) == 1:
             return postprocessed[0]
         return postprocessed
-
+    '''
+    def postprocess(self, model_outputs, top_k=None):
+        logits = model_outputs['logits']
+        #print(logits.shape) #torch.Size([1, 3])
+        logits = F.softmax(logits, dim=-1)
+        #print(logits.shape) #torch.Size([1, 3])
+        postprocessed = []
+        for logit in logits:
+            line = []
+            for i, score in enumerate(logit):
+                label = self.model.config.id2label[i]
+                line.append({'label': label, 'score': score.item()})
+                line.sort(key=lambda x: x['score'], reverse=True)
+                if top_k != None:
+                    line = line[:top_k] 
+            postprocessed.append(line)
+        if len(postprocessed) == 1:
+            return postprocessed[0]
+        return postprocessed
+        
 def register_pipeline():
     PIPELINE_REGISTRY.register_pipeline('tabular-classification', 
                                     #pt_model=AutoModelForTabularClassification
