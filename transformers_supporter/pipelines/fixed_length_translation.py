@@ -19,13 +19,13 @@ class FixedLengthTranslationPipeline(Pipeline):
     def postprocess(self, model_outputs):
         logits = model_outputs['logits']
         #print(logits.shape) #torch.Size([1, 3, 9])
-        logits = F.softmax(logits, dim=-1)
-        logits = logits.argmax(axis=-1)
-        #print(logits.shape) #torch.Size([1, 3])
+        scores = F.softmax(logits, dim=-1)
+        indexes = scores.argmax(axis=-1)
+        #print(indexes.shape) #torch.Size([1, 3])
         postprocessed = []
-        for logit in logits:
-            #print(logit) #tensor([2, 4, 6], device='mps:0')
-            tokens = self.tokenizer.convert_ids_to_tokens(logit)
+        for index in indexes:
+            #print(index) #tensor([2, 4, 6], device='mps:0')
+            tokens = self.tokenizer.convert_ids_to_tokens(index)
             translation_text = ' '.join(tokens)
             postprocessed.append({'translation_text': translation_text}) 
         return postprocessed
