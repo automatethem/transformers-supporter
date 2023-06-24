@@ -21,14 +21,14 @@ class ImageClassificationPipeline(Pipeline):
     def postprocess(self, model_outputs, top_k=5):
         logits = model_outputs['logits']
         #print(logits.shape) #torch.Size([1, 3])
-        logits = F.softmax(logits, dim=-1)
-        #print(logits.shape) #torch.Size([1, 3])
+        scores = F.softmax(logits, dim=-1)
+        #print(scores.shape) #torch.Size([1, 3])
         postprocessed = []
-        for logit in logits:
+        for score in scores:
             line = []
-            for i, score in enumerate(logit):
+            for i, float_score in enumerate(score):
                 label = self.model.config.id2label[i]
-                line.append({'label': label, 'score': score.item()})
+                line.append({'label': label, 'score': float_score.item()})
             line.sort(key=lambda x: x['score'], reverse=True)
             if top_k != None:
                 line = line[:top_k] 
