@@ -13,9 +13,16 @@ from transformers.utils import cached_file
 from pathlib import Path
 
 class TabularFeatureExtractor(FeatureExtractionMixin):
+    pretrained_model_name_or_path = None
     transformer = None
     le = None
 
+    @classmethod
+    def from_pretrained(cls, pretrained_model_name_or_path, **kwargs):
+        feature_extractor_dict, kwargs = cls.get_feature_extractor_dict(pretrained_model_name_or_path, **kwargs)
+        cls.pretrained_model_name_or_path = pretrained_model_name_or_path #
+        return cls.from_dict(feature_extractor_dict, **kwargs)
+    
     #labels_shape: list, one, onehot
     #labels_type: float, long
     def __init__(
@@ -35,17 +42,17 @@ class TabularFeatureExtractor(FeatureExtractionMixin):
         self.labels_type = labels_type
         self.labels = []
 
-    def __call__(self, df, transformer_path=None, return_tensors=None, **kwargs):
-        if TabularFeatureExtractor.transformer == None and transformer_path != None:
-            if Path(transformer_path).exists():
-                transformer_file = f'{transformer_path}/transformer.pkl'
+        if TabularFeatureExtractor.pretrained_model_name_or_path:
+            if Path(TabularFeatureExtractor.pretrained_model_name_or_path).exists():
+                transformer_file = f'{TabularFeatureExtractor.pretrained_model_name_or_path}/transformer.pkl'
             else:
                 #transformer_file = cached_file(path_or_repo_id='automatethem/imdb-text-classification', filename='transformer.pkl')
-                transformer_file = cached_file(path_or_repo_id=transformer_path, filename='transformer.pkl')
+                transformer_file = cached_file(path_or_repo_id=TabularFeatureExtractor.pretrained_model_name_or_path, filename='transformer.pkl')
                 #print(transformer_file) #/root/.cache/huggingface/hub/models--automatethem--iris-tabular-classification/snapshots/c588c4558da42a7c63fdb05bef68ecc35dc19710/transformer.pkl
             with open(transformer_file, 'rb') as f:
                 TabularFeatureExtractor.transformer = pickle.load(f)
-        
+    
+    def __call__(self, df, return_tensors=None, **kwargs):
         x = df[self.continuous_columns + self.categorical_columns]
         x = TabularFeatureExtractor.transformer.transform(x)
         x = np.array(x, dtype=np.float32)
