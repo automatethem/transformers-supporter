@@ -28,7 +28,8 @@ class FixedLengthTranslationPipeline(Pipeline):
             tokens = self.feature_extractor.convert_ids_to_tokens(logit)
             translation_text = ' '.join(tokens)
             postprocessed.append({'translation_text': translation_text}) 
-
+        return postprocessed
+        
 def register_pipeline():
     PIPELINE_REGISTRY.register_pipeline('fixed-length-translation', 
                                     #pt_model=AutoModelForFixedLengthTranslation,
