@@ -88,7 +88,7 @@ class TorchtextFeatureExtractor(FeatureExtractionMixin):
 
         input_ids = []
         for text in texts:
-            print(text)
+            #print(text)
             tokens = self.tokenize(text)
             ids = TorchtextFeatureExtractor.vocab(tokens)
             if padding == False or padding == None:
