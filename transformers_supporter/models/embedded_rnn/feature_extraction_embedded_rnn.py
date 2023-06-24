@@ -19,9 +19,7 @@ class TorchtextFeatureExtractor(FeatureExtractionMixin):
     vocab = None
 
     @classmethod
-    def from_pretrained(
-        cls, pretrained_model_name_or_path, **kwargs
-    ):
+    def from_pretrained(cls, pretrained_model_name_or_path, **kwargs):
         feature_extractor_dict, kwargs = cls.get_feature_extractor_dict(pretrained_model_name_or_path, **kwargs)
         cls.pretrained_model_name_or_path = pretrained_model_name_or_path #
         return cls.from_dict(feature_extractor_dict, **kwargs)
