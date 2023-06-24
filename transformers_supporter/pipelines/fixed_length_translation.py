@@ -25,7 +25,7 @@ class FixedLengthTranslationPipeline(Pipeline):
         postprocessed = []
         for logit in logits:
             #print(logit) #tensor([2, 4, 6], device='mps:0')
-            tokens = self.feature_extractor.convert_ids_to_tokens(logit)
+            tokens = self.tokenizer.convert_ids_to_tokens(logit)
             translation_text = ' '.join(tokens)
             postprocessed.append({'translation_text': translation_text}) 
         return postprocessed
