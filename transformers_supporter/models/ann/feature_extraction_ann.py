@@ -58,16 +58,8 @@ class TabularFeatureExtractor(FeatureExtractionMixin):
         x = np.array(x, dtype=np.float32)
         #print(x.shape) #
 
-        if self.labels_column not in df.columns:
-            '''
-            if return_tensors == 'pt':
-                x = torch.from_numpy(x)
-            return {'x': x}
-            '''
-            #'''
-            return BatchFeature(data={'x': x}, tensor_type=return_tensors)
-            #'''
-        else:
+        #학습
+        if self.labels_column in df.columns:
             labels = df[self.labels_column]
             labels = labels.to_numpy()
 
@@ -93,6 +85,16 @@ class TabularFeatureExtractor(FeatureExtractionMixin):
             '''
             #'''
             return BatchFeature(data={'x': x, 'labels': labels}, tensor_type=return_tensors)
+            #'''
+        #예측
+        else:
+            '''
+            if return_tensors == 'pt':
+                x = torch.from_numpy(x)
+            return {'x': x}
+            '''
+            #'''
+            return BatchFeature(data={'x': x}, tensor_type=return_tensors)
             #'''
 
     def train(self, df):
