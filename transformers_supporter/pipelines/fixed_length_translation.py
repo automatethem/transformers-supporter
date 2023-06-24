@@ -19,17 +19,15 @@ class FixedLengthTranslationPipeline(Pipeline):
     def postprocess(self, model_outputs):
         logits = model_outputs['logits']
         #print(logits.shape) #torch.Size([1, 3, 9])
-
-        probabilities = F.softmax(logits, dim=-1)
-        probabilities = probabilities.argmax(axis=-1)
-        results = []
-        for probability in probabilities:
-            #print(probability) #tensor([2, 4, 6])
-            tokens = self.tokenizer.convert_ids_to_tokens(probability)
+        logits = F.softmax(logits, dim=-1)
+        logits = logits.argmax(axis=-1)
+        #print(logits.shape) #torch.Size([1, 3])
+        postprocessed = []
+        for logit in logits:
+            #print(logit) #tensor([2, 4, 6], device='mps:0')
+            tokens = self.feature_extractor.convert_ids_to_tokens(logit)
             translation_text = ' '.join(tokens)
-            #print(translation_text) #i raise dog
-            results.append({'translation_text': translation_text})         
-        return results
+            postprocessed.append({'translation_text': translation_text}) 
 
 def register_pipeline():
     PIPELINE_REGISTRY.register_pipeline('fixed-length-translation', 
