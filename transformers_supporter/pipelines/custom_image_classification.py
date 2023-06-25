@@ -37,7 +37,7 @@ class CustomImageClassificationPipeline(Pipeline):
             return postprocessed[0]
         return postprocessed
 
-def register_pipeline():
+def register():
     PIPELINE_REGISTRY.register_pipeline('custom-image-classification', 
                                     #pt_model=AutoModelForImageClassification,
                                     pipeline_class=CustomImageClassificationPipeline)
