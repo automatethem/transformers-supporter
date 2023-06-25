@@ -107,6 +107,6 @@ class KeyPointImageProcessor(ImageProcessingMixin):
                 new_keypoints.append((x, y))
         return new_keypoints
 
-def register_auto():
+def register():
     AutoImageProcessor.register(GrayscaleImageProcessor, GrayscaleImageProcessor)
     AutoImageProcessor.register(KeyPointImageProcessor, KeyPointImageProcessor)
