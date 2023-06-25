@@ -151,5 +151,5 @@ class TorchtextFeatureExtractor(FeatureExtractionMixin):
             pickle.dump(TorchtextFeatureExtractor.vocab, f)
         return super().save_pretrained(save_directory, push_to_hub, **kwargs)
     
-def register_auto():
+def register():
     AutoFeatureExtractor.register(TorchtextFeatureExtractor, TorchtextFeatureExtractor)
