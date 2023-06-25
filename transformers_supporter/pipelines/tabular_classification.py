@@ -37,7 +37,7 @@ class TabularClassificationPipeline(Pipeline):
             return postprocessed[0]
         return postprocessed
         
-def register_pipeline():
+def register():
     PIPELINE_REGISTRY.register_pipeline('tabular-classification', 
                                     #pt_model=AutoModelForTabularClassification
                                     pipeline_class=TabularClassificationPipeline)
