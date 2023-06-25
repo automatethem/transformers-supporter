@@ -3,7 +3,6 @@ from . import pipelines
 
 #
 
-'''
 from .models.ann import configuration_ann
 from .models.ann import feature_extraction_ann
 from .models.ann import modeling_ann
@@ -33,44 +32,42 @@ from .models.rnn import configuration_rnn
 from .models.rnn import modeling_rnn
 from .models.rnn import feature_extraction_rnn
 
-def register_auto():
-    configuration_ann.register_auto()
-    modeling_ann.register_auto()
-    feature_extraction_ann.register_auto()
-
-    configuration_cnn.register_auto()
-    modeling_cnn.register_auto()
-    image_processing_cnn.register_auto()
-
-    configuration_custom_bert.register_auto()
-    modeling_custom_bert.register_auto()
-
-    configuration_embedded_1dcnn.register_auto()
-    modeling_embedded_1dcnn.register_auto()
-
-    configuration_embedded_rnn.register_auto()
-    modeling_embedded_rnn.register_auto()
-    feature_extraction_embedded_rnn.register_auto()
-
-    configuration_pretrained_embedded_rnn.register_auto()
-    modeling_pretrained_embedded_rnn.register_auto()
-
-    configuration_faster_rcnn.register_auto()
-    modeling_faster_rcnn.register_auto()
-    image_processing_faster_rcnn.register_auto()
-
-    configuration_rnn.register_auto()
-    modeling_rnn.register_auto()
-    feature_extraction_rnn.register_auto()
-    
 from .pipelines import tabular_regression
 from .pipelines import tabular_classification
 from .pipelines import custom_image_classification
 from .pipelines import fixed_length_translation
 
-def register_pipeline():
-    tabular_regression.register_pipeline()
-    tabular_classification.register_pipeline()
-    custom_image_classification.register_pipeline()
-    fixed_length_translation.register_pipeline()
-'''
+def register():
+    configuration_ann.register()
+    modeling_ann.register()
+    feature_extraction_ann.register()
+
+    configuration_cnn.register()
+    modeling_cnn.register()
+    image_processing_cnn.register()
+
+    configuration_custom_bert.register()
+    modeling_custom_bert.register()
+
+    configuration_embedded_1dcnn.register()
+    modeling_embedded_1dcnn.register()
+
+    configuration_embedded_rnn.register()
+    modeling_embedded_rnn.register()
+    feature_extraction_embedded_rnn.register()
+
+    configuration_pretrained_embedded_rnn.register()
+    modeling_pretrained_embedded_rnn.register()
+
+    configuration_faster_rcnn.register()
+    modeling_faster_rcnn.register()
+    image_processing_faster_rcnn.register()
+
+    configuration_rnn.register()
+    modeling_rnn.register()
+    feature_extraction_rnn.register()
+    
+    tabular_regression.register()
+    tabular_classification.register()
+    custom_image_classification.register()
+    fixed_length_translation.register()
