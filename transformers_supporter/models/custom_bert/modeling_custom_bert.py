@@ -56,5 +56,5 @@ class CustomBertForSequenceClassification(PreTrainedModel):
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 #'''
 
-def register_auto():
+def register():
     AutoModelForSequenceClassification.register(CustomBertConfig, CustomBertForSequenceClassification)
