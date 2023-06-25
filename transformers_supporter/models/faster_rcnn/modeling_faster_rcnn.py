@@ -72,6 +72,6 @@ class FasterRcnnForObjectDetection(PreTrainedModel):
                     scores.append(output['scores'])
                 return transformers.file_utils.ModelOutput({'loss': loss, 'boxes': boxes, 'labels': labels, 'scores': scores})
 
-def register_auto():
+def register():
     AutoModelForObjectDetection.register(FasterRcnnConfig, FasterRcnnForObjectDetection)
 
