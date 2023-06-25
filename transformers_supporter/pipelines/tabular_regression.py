@@ -23,7 +23,7 @@ class TabularRegressionPipeline(Pipeline):
             postprocessed.append({"logit": logit[0].item()})        
         return postprocessed
 
-def register_pipeline():
+def register():
     PIPELINE_REGISTRY.register_pipeline('tabular-regression', 
                                     #pt_model=AutoModelForTabularRegression
                                     pipeline_class=TabularRegressionPipeline)
