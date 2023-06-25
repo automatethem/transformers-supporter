@@ -17,5 +17,5 @@ class PretrainedEmbeddedRnnConfig(PretrainedConfig):
         #Keys are always strings in JSON so convert ids to int here.       
         super().__init__(**kwargs)
 
-def register_auto():
+def register():
     AutoConfig.register("pretrained-embedded-rnn", PretrainedEmbeddedRnnConfig)
