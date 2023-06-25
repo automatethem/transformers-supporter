@@ -65,12 +65,12 @@ def register_auto():
     
 from .pipelines import tabular_regression
 from .pipelines import tabular_classification
-from .pipelines import image_classification
+from .pipelines import custom_image_classification
 from .pipelines import fixed_length_translation
 
 def register_pipeline():
     tabular_regression.register_pipeline()
     tabular_classification.register_pipeline()
-    image_classification.register_pipeline()
+    custom_image_classification.register_pipeline()
     fixed_length_translation.register_pipeline()
 '''
