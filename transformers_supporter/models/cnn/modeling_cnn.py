@@ -78,6 +78,6 @@ class CnnForKeyPointDetection(PreTrainedModel):
             loss = F.mse_loss(logits, labels) 
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-def register_auto():
+def register():
     AutoModelForImageClassification.register(CnnConfig, CnnForImageClassification)
     #AutoModelForKeyPointDetection.register(CnnConfig, CnnForKeyPointDetection)
