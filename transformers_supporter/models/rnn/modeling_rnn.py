@@ -73,6 +73,6 @@ class RnnForTimeSeriesRegression(PreTrainedModel):
             loss = F.mse_loss(logits, labels) 
             return transformers.file_utils.ModelOutput({'loss': loss, 'logits': logits})
 
-def register_auto():
+def register():
     AutoModelForAudioClassification.register(RnnConfig, RnnForAudioClassification)
     #AutoModelForTimeSeriesRegression.register(RnnConfig, RnnForTimeSeriesRegression)
