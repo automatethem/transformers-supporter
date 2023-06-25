@@ -48,5 +48,5 @@ class Wav2Vec2FeatureExtractor(FeatureExtractionMixin):
         #print(normed_input_values) #[array([-0.02099453, -0.0440244 , -0.0508533 , ..., -0.00437161, -0.01633461, -0.03376846], dtype=float32)]
         return normed_input_values
 
-def register_auto():
+def register():
     AutoFeatureExtractor.register(Wav2Vec2FeatureExtractor, Wav2Vec2FeatureExtractor)
