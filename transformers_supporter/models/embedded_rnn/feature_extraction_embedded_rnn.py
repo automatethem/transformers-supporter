@@ -7,9 +7,13 @@ from torchtext.vocab import build_vocab_from_iterator, Vectors
 from transformers.utils import cached_file
 from pathlib import Path
 
+'''
 #https://stackoverflow.com/a/69744857
+#console:
+#python -m spacy download en_core_web_sm
 import spacy.cli
 spacy.cli.download("en_core_web_sm")
+'''
 
 #token_type: word, split, subword, char
 #language: en, de, ko
