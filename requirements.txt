@@ -1,7 +1,7 @@
 #pip install -r requirements.txt
 transformers
-pytorch-supporter
-torchtext
+#pytorch-supporter
+#torchtext
 konlpy
 pillow
 spacy
