@@ -50,6 +50,10 @@ feature_extractor = TabularFeatureExtractor.from_pretrained(model_path)
 pl = TabularRegressionPipeline(model=model, feature_extractor=feature_extractor, device=device)
 ```
 
+```
+print(dir(TabularRegressionPipeline)) #['__abstractmethods__', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_ensure_tensor_on_device', '_forward', '_sanitize_parameters', 'check_model_type', 'default_input_names', 'device_placement', 'ensure_tensor_on_device', 'forward', 'get_inference_context', 'get_iterator', 'iterate', 'postprocess', 'predict', 'preprocess', 'run_multi', 'run_single', 'save_pretrained', 'transform']
+```
+
 ### tabular-classification
 
 iris-tabular-classification-model-transformers-custom-supporter  
