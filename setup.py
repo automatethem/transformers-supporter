@@ -7,7 +7,7 @@ def requirements():
 
 setuptools.setup(
 	name='transformers-supporter',
-	version='0.0.35',
+	version='0.0.36',
 	description='Transformers supporter',
 	long_description=open('README.md').read(),
 	long_description_content_type='text/markdown',
